@@ -1,0 +1,65 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.onehundred {
+	height: 100%;
+}
+
+footer {
+	font-size: 10px;
+	position: absolute;
+	bottom: -5px;
+	left: 5px;
+}
+
+body {
+	 overflow: hidden;
+}
+
+td.check {
+	width: 37px;
+	vertical-align: middle !important;
+	text-align: center;
+}
+td.check input {
+	margin: 0;	
+}
+
+td.item {
+	padding-left: 0px !important;
+}
+
+td.course {
+	width: 64px !important;
+}
+
+td.date {
+	width: 64px !important;
+}
+
+td a {
+	color: rgb(44, 62, 80);
+	text-decoration: underline;
+}
+
+@media(max-width: 768px) {
+	body {
+		overflow: scroll !important;
+	}
+}
+
+.courseinfo {
+	margin-top: 13px;
+}
+
+hr.small {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.glyphicon-ok.form-control-feedback {
+	color:  #149c82 !important;
+}
