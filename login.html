@@ -41,8 +41,8 @@
 					<div class="wrap">
 						<p class="form-title">WELCOME</p>
 						<form  class="login">
-							<input onmouseover="IDexplanationShow()" onmouseout="IDexplanationHide()" onclick="IDexplanationHide()" placeholder="Student ID" type="text"><b>
-							<input placeholder="Password" type="password">
+							<input id="id_input" data-toggle="tooltip" data-placement="right" title="The number given to you by your school as identification" placeholder="Student ID" type="text"><b>
+							<input id="pass_input" data-toggle="tooltip" data-placement="right" title="The same password you would use to log in to PowerSchool&reg; with" placeholder="Password" type="password">
 							<div class="btn-group">
 								<input class="btn btn-success btn-sm" onclick="javascript:$('#closedBetaModal').modal('show');" type="button" value="Sign In">
 								
@@ -73,8 +73,6 @@
 				<p>Made with &lt;3 by Will Franzen and friends &middot; Check out the source code on <a href="https://github.com/LFHS/CenterScout/">GitHub</a>!</p>
 			</footer>
 		</div>
-
-		<div id="IDexplanation">  The number given to you by your school as identification.</div>
 
 		<div class="modal fade" id="closedBetaModal" tabindex="-1">
 			<div class="modal-dialog" style="left: 0px">
@@ -110,7 +108,9 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
 		<script> window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.js"><\/script>') </script>
 		<script src="js/vendor/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>t <script>
+		<script src="js/main.js"></script>
+		<script src="js/login.js"></script>
+		<script>
 			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 			g.src='//www.google-analytics.com/ga.js';
