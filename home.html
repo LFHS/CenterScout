@@ -16,6 +16,7 @@
 				}
 		</style>
 		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="css/introjs.min.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
@@ -27,7 +28,7 @@
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
-				<div class="navbar-header">
+				<div class="navbar-header" data-step="1" data-intro="Hello World">
 					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"></button>
 					<a class="navbar-brand" href="#"><img src="img/largeCS.png" style="position: fixed; top: 0px; left: 3px; height: 60px">CenterScout</a>
 				</div>
@@ -56,7 +57,7 @@
 
 			<div class="row">
 				<div class="col-lg-6">
-					<h2>Assignments</h2>
+					<h2 data-step="2" data-intro="Derp">Assignments</h2>
 
 					<table class="table table-striped">
 						<tr>
@@ -214,6 +215,7 @@
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.js"><\/script>')</script>
 		<script src="js/vendor/bootstrap.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/vendor/intro.min.js"></script>
 		<script>
 			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
