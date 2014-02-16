@@ -67,3 +67,18 @@ hr.small {
 .item.done {
 	text-decoration: line-through;
 }
+#gT1{
+	position: absolute;
+	left: 17%;
+	font-weight: bold;
+}
+#gT2{
+	position: absolute;
+	left: 34%;
+	font-weight: bold;
+}
+#gT3{
+	position: absolute;
+	left: 52%;
+	font-weight: bold;
+}
