@@ -60,12 +60,12 @@
 
 				<div class="col-lg-2">
 					<div class="btn-group">
-						<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">AAA <span class="caret"></span></button>
+						<button id="classChoice" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">AAA <span class="caret"></span></button>
 
 						<ul class="dropdown-menu">
 							<li class="active"><a href="#">AAA</a></li>
 
-							<li><a href="#">E1CP</a></li>
+							<li onclick="class2()"><a href="#">E1CP</a></li>
 
 							<li><a href="#">CAD-E</a></li>
 
@@ -80,17 +80,19 @@
 					</div>
 				</div>
                  <div class="col-lg-5">
-		<h3 style="margin-top: 0px">Mr. Smith</h3>
+		<h3 id="teacher" style="margin-top: 0px">Mr. Smith</h3>
 				</div>
 				<div class="col-lg-5">
-				<h3 style="margin-top: 0px">AAA</h3>
+				<h3 id="class" style="margin-top: 0px">Advanced Algebra Accelerated</h3>
 				</div>
 				<div class="col-lg-5">
-										<h3 style="margin-top: 0px">97.3</h3>
-				</div>				<div class="col-lg-5"></div>
-			</div>
-			
-			<hr>
+										<h3 id="grade" style="margin-top: 0px">A(97.3%)</h3>
+										</div>	<div class="col-lg-5"></div>
+										<div class="col-lg-5">
+										<h3 id="GPA" style="margin-top: 0px">5.0</h3>
+				</div>
+							</div>
+						<hr>
 
 			<footer>
 				<p>Made with &lt;3 by Will Franzen &middot; Check out the source code on <a href="#">GitHub</a>!</p>
@@ -104,6 +106,15 @@
 			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 			g.src='//www.google-analytics.com/ga.js';
 			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+		<script type="text/javascript">
+			class2=function(){
+				document.getElementById("teacher").innerHTML="Mr. Tupanjac";
+				document.getElementById("class").innerHTML="English 1CP";
+				document.getElementById("grade").innerHTML="A-(91.3%)";
+				document.getElementById("GPA").innerHTML="4.67";
+				document.getElementById("classChoice").innerHTML="E1CP"
+							};
 		</script>
 	</body>
 </html>
