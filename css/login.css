@@ -1,7 +1,7 @@
 body
 {
-    background: url('../img/medCS4l2.png') fixed;
-    background-size: cover;
+    background: url('https://mozorg.cdn.mozilla.net/media/img/firefox/os/have-it-all/gray-pattern.png') fixed;
+    
     padding: 0;
     margin: 0;
 }
