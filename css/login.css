@@ -1,6 +1,6 @@
 body
 {
-    background: url('https://mozorg.cdn.mozilla.net/media/img/firefox/os/have-it-all/gray-pattern.png') fixed;
+    background: url('../img/homebg.png') fixed;
     
     padding: 0;
     margin: 0;
@@ -76,7 +76,7 @@ form.login>a
 
 form.login>a:hover
 {
-    color: #2ecc71;
+    color: #149c82;
 }
 
 .faux-item {
