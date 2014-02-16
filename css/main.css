@@ -40,6 +40,15 @@ td.date {
 	width: 64px !important;
 }
 
+td.frac {
+	width: 64px !important;
+}
+
+td.percent {
+	width: 64px !important;
+	text-align: right;
+}
+
 td a {
 	color: rgb(44, 62, 80);
 	text-decoration: underline;
