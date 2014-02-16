@@ -28,9 +28,9 @@
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
-				<div class="navbar-header" data-step="1" data-intro="Hello World">
+				<div class="navbar-header">
 					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"></button>
-					<a class="navbar-brand" href="#"><img src="img/largeCS.png" style="position: fixed; top: 0px; left: 3px; height: 60px">CenterScout</a>
+					<a class="navbar-brand" href="#"><img src="img/largeCS.png" data-step="1" data-intro="Hello! Welcome to CenterScout! Blah blah blah" style="position: fixed; top: 0px; left: 3px; height: 60px">CenterScout</a>
 				</div>
 
 				<div class="navbar-collapse collapse">
@@ -56,107 +56,110 @@
 		<div class="container">
 
 			<div class="row">
-				<div class="col-lg-6">
-					<h2 data-step="2" data-intro="Derp">Assignments</h2>
+				<div class="col-lg-6" >
+					<div data-step="2" data-intro="Here are all of your assignments, in order of due date.">
+						<h2>Assignments</h2>
 
-					<table class="table table-striped">
-						<tr>
-							<td class="check"><input type="checkbox"></td>
+						<table class="table table-striped">
+							<tr data-step="3" data-intro="This is an assignment">
+								<td class="check" data-step="5" data-intro="You can check this box when you are finished with an assignment, to cross it off the list."><input type="checkbox"></td>
 
-							<td class="item">Read p.325-330</td>
+								<td class="item" data-step="4" data-intro="Here is the title of the assignment, according to your teacher.">Read p.325-330</td>
 
-							<td class="course">[WC]</td>
+								<td class="course" data-step="6" data-intro="This is the automatically generated class short code. These can be customized in the settings menu.">[WC]</td>
 
-							<td class="date">02/05</td>
-						</tr>
+								<td class="date" data-step="7" data-intro="This is the date your teacher has set for this assignment to be due.">02/05</td>
+							</tr>
 
-						<tr>
-							<td class="check"><input type="checkbox"></td>
+							<tr>
+								<td class="check"><input type="checkbox"></td>
 
-							<td class="item">Book
-							p.432#5-25(odds),6,10,50-60(evens)</td>
+								<td class="item">Book
+								p.432#5-25(odds),6,10,50-60(evens)</td>
 
-							<td class="course">[AAA]</td>
+								<td class="course">[AAA]</td>
 
-							<td class="date">02/06</td>
-						</tr>
+								<td class="date">02/06</td>
+							</tr>
 
-						<tr>
-							<td class="check"><input type="checkbox"></td>
+							<tr>
+								<td class="check"><input type="checkbox"></td>
 
-							<td class="item">Write me a letter about health</td>
+								<td class="item">Write me a letter about health</td>
 
-							<td class="course">[He]</td>
+								<td class="course">[He]</td>
 
-							<td class="date">02/07</td>
-						</tr>
+								<td class="date">02/07</td>
+							</tr>
 
-						<tr>
-							<td class="check"><input type="checkbox"></td>
+							<tr>
+								<td class="check"><input type="checkbox"></td>
 
-							<td class="item">Writing Workshop 4 due!</td>
+								<td class="item">Writing Workshop 4 due!</td>
 
-							<td class="course">[E1CP]</td>
+								<td class="course">[E1CP]</td>
 
-							<td class="date">02/08</td>
-						</tr>
+								<td class="date">02/08</td>
+							</tr>
 
-						<tr>
-							<td class="check"><input type="checkbox"></td>
+							<tr>
+								<td class="check"><input type="checkbox"></td>
 
-							<td class="item">Read p.330-332</td>
+								<td class="item">Read p.330-332</td>
 
-							<td class="course">[WC]</td>
+								<td class="course">[WC]</td>
 
-							<td class="date">02/09</td>
-						</tr>
+								<td class="date">02/09</td>
+							</tr>
 
-						<tr>
-							<td class="check"><input type="checkbox"></td>
+							<tr>
+								<td class="check"><input type="checkbox"></td>
 
-							<td class="item">TEST on Chaper 12</td>
+								<td class="item">TEST on Chaper 12</td>
 
-							<td class="course">[AAA]</td>
+								<td class="course">[AAA]</td>
 
-							<td class="date">02/10</td>
-						</tr>
-					</table>
+								<td class="date">02/10</td>
+							</tr>
+						</table>
+					</div>
+					<div data-step="8" data-intro="This is recent school and CenterScout related news." data-position="top">
+						<h2>News</h2>
 
-					<h2>News</h2>
+						<table class="table table-striped">
+							<tr>
+								<td class="check"><span>&bull;</span></td>
 
-					<table class="table table-striped">
-						<tr>
-							<td class="check"><span>&bull;</span></td>
+								<td class="item"><a href="news?id=">CenterScout Public Beta Now Open!</a></td>
 
-							<td class="item"><a href="news?id=">CenterScout Public Beta Now Open!</a></td>
+								<td class="date">02/05</td>
+							</tr>
 
-							<td class="date">02/05</td>
-						</tr>
+							<tr>
+								<td class="check"><span>&bull;</span></td>
 
-						<tr>
-							<td class="check"><span>&bull;</span></td>
+								<td class="item"><a href="news?id=">E-Day tomorrow! Everything you need to know</a></td>
 
-							<td class="item"><a href="news?id=">E-Day tomorrow! Everything you need to know</a></td>
+								<td class="date">02/04</td>
+							</tr>
 
-							<td class="date">02/04</td>
-						</tr>
+							<tr>
+								<td class="check"><span>&bull;</span></td>
 
-						<tr>
-							<td class="check"><span>&bull;</span></td>
+								<td class="item"><a href="news?id=">Congradulations to all CenterScout Private Beta Testers! Click here to give feedback on the site.</a></td>
 
-							<td class="item"><a href="news?id=">Congradulations to all CenterScout Private Beta Testers! Click here to give feedback on the site.</a></td>
-
-							<td class="date">01/27</td>
-						</tr>
-					</table>
+								<td class="date">01/27</td>
+							</tr>
+						</table>
+					</div>
 				</div>
 
-				<div class="col-lg-6">
+				<div class="col-lg-6" data-step="9" data-intro="These are your grades.">
 					<h2>Grades</h2>
 
 					<div class="row">
 						<div class="col-lg-2">
-							<div class="btn-group">
+							<div class="btn-group" data-step="10" data-intro="Click here to change which class' grades you are viewing">
 								<button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button">AAA <span class="caret"></span></button>
 
 								<ul class="dropdown-menu">
@@ -178,19 +181,19 @@
 						</div>
 
 						<div class="col-lg-2">
-							<div class="courseinfo">
+							<div class="courseinfo" data-step="11" data-intro="This is your letter grade in the currently selected class">
 								A
 							</div>
 						</div>
 
 						<div class="col-lg-2">
-							<div class="courseinfo">
+							<div class="courseinfo" data-step="12" data-intro="This is your percentage in the currently selected class">
 								97.3%
 							</div>
 						</div>
 
 						<div class="col-lg-2">
-							<div class="courseinfo">
+							<div class="courseinfo" data-step="13" data-intro="This is the score that is averaged into your GPA for the currently selected class">
 								5.0
 							</div>
 						</div>
