@@ -63,3 +63,7 @@ hr.small {
 .glyphicon-ok.form-control-feedback {
 	color:  #149c82 !important;
 }
+
+.item.done {
+	text-decoration: line-through;
+}
