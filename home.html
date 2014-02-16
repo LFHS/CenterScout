@@ -225,5 +225,10 @@
 			g.src='//www.google-analytics.com/ga.js';
 			s.parentNode.insertBefore(g,s)}(document,'script'));
 		</script>
+		<script>
+			$(document).ready(function(){
+				introJs().setOption("showStepNumbers", "false").start(); // Temporary, there will be an alert of some kind asking if the user wants a tour
+			});
+		</script>
 	</body>
 </html>
