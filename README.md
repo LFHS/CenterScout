@@ -23,6 +23,7 @@ Technologies
 - Node.js
 - Socket.io
 - Git
+- konami.js
 
 TODO
 ====
