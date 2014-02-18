@@ -40,8 +40,8 @@ TODO
  - Appcache for offline use
  - Custom class tagging
 - Server
- - PowerSchool Node.js API
- - http://lfhs.org API
+ - **PowerSchool Node.js API**
+ - **http://lfhs.org API**
  - User signup
  - User authentication
  - Beta keys
