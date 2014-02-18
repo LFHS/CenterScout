@@ -59,12 +59,12 @@ Contributors
 - Backend
 - Database
 
-**Brady Africk** ([Markotupanjac](https://github.com/Markotupanjac))
+**Brady Africk** ([BradyLF](https://github.com/BradyLF))
 
 - Graphic Design
 - UX Design
 
-**Marko Tupanjac** ([BradyLF](https://github.com/BradyLF))
+**Marko Tupanjac** ([Markotupanjac](https://github.com/Markotupanjac))
 
 - General CSS and HTML
 
