@@ -51,7 +51,7 @@ TODO
 Contributors
 ============
 
-**Will Franzen**
+**Will Franzen** ([wtfaremyinitials](https://github.com/wtfaremyinitials))
 
 - Project Lead
 - UI Design
@@ -59,15 +59,15 @@ Contributors
 - Backend
 - Database
 
-**Brady Africk**
+**Brady Africk** ([Markotupanjac](https://github.com/Markotupanjac))
 
 - Graphic Design
 - UX Design
 
-**Marko Tupanjac**
+**Marko Tupanjac** ([BradyLF](https://github.com/BradyLF))
 
 - General CSS and HTML
 
-**John Higgins**
+**John Higgins** ([higgy99](https://github.com/higgy99))
 
 - General CSS and HTML
