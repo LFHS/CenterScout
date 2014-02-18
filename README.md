@@ -71,3 +71,8 @@ Contributors
 **John Higgins** ([higgy99](https://github.com/higgy99))
 
 - General CSS and HTML
+
+
+**Colin Lynch**
+
+- Head of publicity
