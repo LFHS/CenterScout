@@ -40,8 +40,8 @@ TODO
  - Appcache for offline use
  - Custom class tagging
 - Server
- - PowerSchool Node.js API
- - http://lfhs.org API
+ - **PowerSchool Node.js API**
+ - **http://lfhs.org API**
  - User signup
  - User authentication
  - Beta keys
@@ -71,3 +71,8 @@ Contributors
 **John Higgins** ([higgy99](https://github.com/higgy99))
 
 - General CSS and HTML
+
+
+**Colin Lynch**
+
+- Head of publicity
