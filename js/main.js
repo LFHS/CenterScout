@@ -8,7 +8,7 @@ console.log("%c Hey! If you're interested in how the site works, you should chec
 function loginToLFHS(url) {
 	var form = document.createElement("form");
 	form.setAttribute("method", "POST");
-	form.setAttribute("action", "/login/index.aspx");
+	form.setAttribute("action", "https:///www.lakeforestschools.org/login/index.aspx");
 	
 	var loginData = {
 		Email: username, // Why is a student's ID put in a field called Email :v
@@ -16,7 +16,7 @@ function loginToLFHS(url) {
 		rememberMe: 'false',
 		LinkID: '',
 		Referrer: '/students/index.aspx', // Why not use the Referrer HTTP header?
-		pageaction: 'login'
+		pageaction: 'Login'
 	}
 
 	for(var key in loginData) {
