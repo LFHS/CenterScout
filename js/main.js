@@ -20,11 +20,11 @@ function loginToLFHS(url) {
 	}
 
 	for(var key in loginData) {
-		if(params.hasOwnProperty(key)) {
+		if(loginData.hasOwnProperty(key)) {
 			var hiddenField = document.createElement("input");
 			hiddenField.setAttribute("type", "hidden");
 			hiddenField.setAttribute("name", key);
-			hiddenField.setAttribute("value", params[key]);
+			hiddenField.setAttribute("value", loginData[key]);
 
 			form.appendChild(hiddenField);
 		}
