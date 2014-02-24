@@ -15,7 +15,7 @@ function loginToLFHS(url) {
 		password: password,
 		rememberMe: 'false',
 		LinkID: '',
-		Referrer: '/students/index.aspx', // Why not use the Referrer HTTP header?
+		Referrer: url, // Why not use the Referrer HTTP header?
 		pageaction: 'Login'
 	}
 
