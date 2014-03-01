@@ -93,15 +93,3 @@ form.login>a:hover
 	right: 0;
 	top: calc(100% - 2px);
 }
-#IDexplanation {
-	font-size: 12px;
-	position: absolute;
-	top: 50%;
-	left: 61%;
-	height: 20px;
-	width: 340px;
-	background-color: #149c82;
-	border-radius: 1pc;
-	opacity: 0.9;
-	visibility: hidden;
-}
