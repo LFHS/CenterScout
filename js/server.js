@@ -6,7 +6,12 @@ window.Server = function(host) {
   
   function post(endpoint, params, callback) {
     var request = new XMLHttpRequest();
-    request.open('POST', this.apiurl + endpoint);
+    request.open('POST', this.apiurl + endpoint, true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    
+    
+    
+    request.send();
   }
   
 }
