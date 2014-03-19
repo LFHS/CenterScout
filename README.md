@@ -47,6 +47,8 @@ TODO
  - Beta keys
  - Database of user's completed assignments
  - Automatic assignment-grade association
+ - Choose templating engine
+ - Rewrite UI in above templating engine.
 
 Contributors
 ============
