@@ -68,7 +68,7 @@ app.get('/api/grade/class/detail', function(req, res) {
 
  // Redirect to Login or Homepage
  app.get('/', function(req, res) {
-     if(true) {
+     if(req.session.loggedIn) {
          res.writeHead(302, { 'location': '/home' });
      } else {
          res.writeHead(302, { 'location': '/login' });
