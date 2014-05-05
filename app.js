@@ -17,6 +17,29 @@ app.use(express.static('./public'));
 app.engine('hbs', consolidate.handlebars);
 app.set('view engine', 'hbs');
 
+// Middleware for POST requests
+app.use(express.json());
+
+// API Endpoints
+// Attempt to log the user in
+app.post('/api/login', function(req, res) {
+    var username = req.body.username;
+    var password = req.body.password;
+    var remember = req.body.remember;
+
+
+});
+
+// Get a list of classes and basic information about each
+app.get('/api/grade/class/list', function(req, res) {
+
+});
+
+// Get grades for a classes
+app.get('/api/grade/class/detail', function() {
+    
+});
+
 // Create and start HTTP server
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Server started.');
