@@ -21,7 +21,6 @@ Technologies
 - Intro.js
 - Modernizr
 - Node.js
-- Socket.io
 - Git
 - konami.js
 
@@ -47,6 +46,9 @@ TODO
  - Beta keys
  - Database of user's completed assignments
  - Automatic assignment-grade association
+ - Choose templating engine
+ - Rewrite UI in above templating engine.
+ - Self signed cert iframe installer
 
 Contributors
 ============
