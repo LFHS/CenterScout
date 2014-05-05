@@ -45,7 +45,7 @@ app.get('/api/grade/class/list', function(req, res) {
 });
 
 // Get grades for a classes
-app.get('/api/grade/class/detail', function() {
+app.get('/api/grade/class/detail', function(req, res) {
 
 });
 
