@@ -1,7 +1,13 @@
-// Modules
+/*
+ *    Modules
+ */
 var express = require('express');
 var consolidate = require('consolidate');
 var http = require('http');
+
+/*
+ *    ExpressJS Setup
+ */
 
 // Create ExpressJS instance
 var app = express();
@@ -20,7 +26,10 @@ app.set('view engine', 'hbs');
 // Middleware for POST requests
 app.use(express.json());
 
-// API Endpoints
+/*
+ *    API Endpoints
+ */
+
 // Attempt to log the user in
 app.post('/api/login', function(req, res) {
     var username = req.body.username;
@@ -37,8 +46,12 @@ app.get('/api/grade/class/list', function(req, res) {
 
 // Get grades for a classes
 app.get('/api/grade/class/detail', function() {
-    
+
 });
+
+/*
+ *    NodeJS Setup
+ */
 
 // Create and start HTTP server
 http.createServer(app).listen(app.get('port'), function() {
