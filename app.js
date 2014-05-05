@@ -4,6 +4,13 @@
 var express = require('express');
 var consolidate = require('consolidate');
 var http = require('http');
+var fs = require('fs');
+
+/*
+ *    Configuration
+ */
+ var config  = JSON.parse(fs.readFileSync('config.json'));
+ var secrets = JSON.parse(fs.readFileSync('secrets.json'));
 
 /*
  *    ExpressJS Setup
