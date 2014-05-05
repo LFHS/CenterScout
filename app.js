@@ -50,6 +50,31 @@ app.get('/api/grade/class/detail', function(req, res) {
 });
 
 /*
+ *    Web endpoints
+ */
+
+ // Redirect to Login or Homepage
+ app.get('/', function(req, res) {
+     if(true) {
+         res.writeHead(302, { 'location': '/home' });
+     } else {
+         res.writeHead(302, { 'location': '/login' });
+     }
+     res.end();
+ });
+
+// Login
+app.get('/login', function(req, res) {
+
+});
+
+// Homepage
+app.get('/home', function(req, res) {
+
+});
+
+
+/*
  *    NodeJS Setup
  */
 
