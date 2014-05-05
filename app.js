@@ -33,6 +33,12 @@ app.set('view engine', 'hbs');
 // Middleware for POST requests
 app.use(express.json());
 
+// Sessions
+app.use(express.session({
+    'key': 'app.session',
+    'secret': secrets.sessions
+}));
+
 /*
  *    API Endpoints
  */
