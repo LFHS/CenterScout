@@ -86,6 +86,25 @@ app.get('/home', function(req, res) {
 
 });
 
+// Class List
+app.get('/classes', function(req, res) {
+
+});
+
+// About
+app.get('/about', function(req, res) {
+
+});
+
+// Grades
+app.get('/grades', function(req, res) {
+
+});
+
+// Assignments
+app.get('/assignments', function(req, res) {
+
+});
 
 /*
  *    NodeJS Setup
