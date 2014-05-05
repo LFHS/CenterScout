@@ -17,7 +17,7 @@ app.set('port', process.env.PORT || 8080);
 
 // Define views/ and public/ folders
 app.set('views', './views');
-app.use(express.static('./public'));
+app.use(express.static('./static'));
 
 // Setup HandlebarsJS as templating engine
 app.engine('hbs', consolidate.handlebars);
