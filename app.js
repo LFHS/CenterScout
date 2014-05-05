@@ -78,12 +78,12 @@ app.get('/api/grade/class/detail', function(req, res) {
 
 // Login
 app.get('/login', function(req, res) {
-
+    res.render('login', {});
 });
 
 // Homepage
 app.get('/home', function(req, res) {
-
+    res.render('home', {});
 });
 
 // Class List
@@ -93,7 +93,7 @@ app.get('/classes', function(req, res) {
 
 // About
 app.get('/about', function(req, res) {
-
+    res.render('about');
 });
 
 // Grades
