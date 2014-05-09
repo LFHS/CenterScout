@@ -28,34 +28,34 @@ TODO
 ====
 
 - UI Design
- - Login Page
- - Home Page
- - Individual Class Page
- - Settings Page
- - About Page
+  - Login Page
+  - Home Page
+  - Individual Class Page
+  - Settings Page
+  - About Page
 - Front-end
- - Data transfer between client and server
- - Table reordering and coloring
- - Appcache for offline use
- - Custom class tagging
+  - Data transfer between client and server
+  - Table reordering and coloring
+  - Appcache for offline use
+  - Custom class tagging
 - Server
- - **PowerSchool Node.js API**
- - **http://lfhs.org API**
- - User signup
- - User authentication
- - Beta keys
- - Database of user's completed assignments
- - Automatic assignment-grade association
- - ~~Choose templating engine~~ Handlebars.
- - Rewrite UI in above templating engine.
+  - **PowerSchool Node.js API**
+  - **http://lfhs.org API**
+  - User signup
+  - User authentication
+  - Beta keys
+  - Database of user's completed assignments
+  - Automatic assignment-grade association
+  - ~~Choose templating engine~~ Handlebars.
+  - Rewrite UI in above templating engine.
 - App
- - Convert website into Cordova/PhoneGap project for App Store distribution
- - Student ID PassBook pass
-   - Barcode
-   - Picture
-   - Shows up on lock screen when in library or cafeteria
-   - Looks like real ID
- - PassBook pass installer built in to the app
+  - Convert website into Cordova/PhoneGap project for App Store distribution
+  - Student ID PassBook pass
+    - Barcode
+    - Picture
+    - Shows up on lock screen when in library or cafeteria
+    - Looks like real ID
+  - PassBook pass installer built in to the app
 
 Contributors
 ============
