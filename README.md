@@ -51,10 +51,10 @@ TODO
 - App
  - Convert website into Cordova/PhoneGap project for App Store distribution
  - Student ID PassBook pass
-  - Barcode
-  - Picture
-  - Shows up on lock screen when in library or cafeteria
-  - Looks like real ID
+   - Barcode
+   - Picture
+   - Shows up on lock screen when in library or cafeteria
+   - Looks like real ID
  - PassBook pass installer built in to the app
 
 Contributors
