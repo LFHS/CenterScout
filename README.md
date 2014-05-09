@@ -23,6 +23,8 @@ Technologies
 - Node.js
 - Git
 - konami.js
+- PhoneGap
+- PassBook
 
 TODO
 ====
