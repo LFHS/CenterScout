@@ -46,9 +46,16 @@ TODO
  - Beta keys
  - Database of user's completed assignments
  - Automatic assignment-grade association
- - Choose templating engine
+ - ~~Choose templating engine~~ Handlebars.
  - Rewrite UI in above templating engine.
- - Self signed cert iframe installer
+- App
+ - Convert website into Cordova/PhoneGap project for App Store distribution
+ - Student ID PassBook pass
+  - Barcode
+  - Picture
+  - Shows up on lock screen when in library or cafeteria
+  - Looks like real ID
+ - PassBook pass installer built in to the app
 
 Contributors
 ============
