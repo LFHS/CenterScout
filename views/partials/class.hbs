@@ -1,201 +1,122 @@
-<!DOCTYPE html>
+<h2>Classes</h2>
 
-<html class="no-js">
-	<head>
-		<meta charset="utf-8">
-		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<hr>
 
-		<title>CenterScout &middot; Classes</title>
-		<meta content="" name="description">
-		<meta content="width=device-width" name="viewport">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<style>
-			body {
-					padding-top: 50px;
-					padding-bottom: 20px;
-				}
-		</style>
-		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-		<link href="css/main.css" rel="stylesheet">
-		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-	</head>
+<div id="classInfo" class="row">
+	<div class="col-md-1">
+		<div class="btn-group">
+			<button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" type="button">AAA <span class="caret"></span></button>
 
-	<body>
-		<!--[if lt IE 7]>
-			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-		<![endif]-->
+			<ul class="dropdown-menu">
+				<li class="active"><a href="#">AAA</a></li>
 
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#"><img src="img/largeCS.png" style="position: fixed; top: 0px; left: 3px; height: 60px">CenterScout</a>
-				</div>
+				<li onclick="class2()"><a href="#">E1CP</a></li>
 
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="home.html">Home</a></li>
+				<li><a href="#">CAD-E</a></li>
 
-						<li><a href="#">Grades</a></li>
+				<li><a href="#">Health</a></li>
 
-						<li><a href="#">Assignments</a></li>
+				<li><a href="#">WC</a></li>
 
-						<li class="active"><a href="#">Classes</a></li>
+				<li><a href="#">FR2</a></li>
 
-						<li><a href="#">News</a></li>
-					</ul>
-
-					<form class="navbar-form navbar-right">
-						<a href="login.html"><button class="btn btn-primary" type="button">Sign out</button></a>
-					</form>
-				</div>
-			</div>
+				<li><a href="#">BIO</a></li>
+			</ul>
 		</div>
+	</div>
 
-		<div class="container">
-			<h2>Classes</h2>
-			
-			<hr>
+	<!-- div class="col-md-11">
+		<a href="mailto:kwilhelm@lfschools.net">Kyle Wilhelm <span class="glyphicon glyphicon-send"></span></a>
+	</div> -->
 
-			<div id="classInfo" class="row">
-				<div class="col-md-1">
-					<div class="btn-group">
-						<button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" type="button">AAA <span class="caret"></span></button>
+	<p>Kleeman- Advanced Algebra Accelerated, Period 7</p>
 
-						<ul class="dropdown-menu">
-							<li class="active"><a href="#">AAA</a></li>
+</div>
 
-							<li onclick="class2()"><a href="#">E1CP</a></li>
+<hr>
 
-							<li><a href="#">CAD-E</a></li>
+<div class="row">
+	<div class="col-md-6">
+	<strong><h4>Upcoming Assignments/Tests</h4></strong>
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th><span class="glyphicon glyphicon-ok"></span></th>
+					<th>Title</th>
 
-							<li><a href="#">Health</a></li>
+					<th>Class</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tr>
+				<td class="check"><input type="checkbox"></td>
 
-							<li><a href="#">WC</a></li>
+				<td class="item">Book p.432#5-25(odds),6,10,50-60(evens)</td>
 
-							<li><a href="#">FR2</a></li>
+				<td class="course"><span class="label label-primary">AAA</span></td>
 
-							<li><a href="#">BIO</a></li>
-						</ul>
-					</div>
-				</div>
+				<td class="date">02/06</td>
+			</tr>
+			<tr>
+				<td class="check"><input type="checkbox"></td>
 
-				<!-- div class="col-md-11">
-					<a href="mailto:kwilhelm@lfschools.net">Kyle Wilhelm <span class="glyphicon glyphicon-send"></span></a>
-				</div> -->
-				
-				<p>Kleeman- Advanced Algebra Accelerated, Period 7</p>
-				
-			</div>
-			
-			<hr>
-			
-			<div class="row">
-				<div class="col-md-6">
-				<strong><h4>Upcoming Assignments/Tests</h4></strong>
-					<table class="table table-striped table-hover">
-						<thead>
-							<tr>
-								<th><span class="glyphicon glyphicon-ok"></span></th>
-								<th>Title</th>
-								
-								<th>Class</th>
-								<th>Date</th>
-							</tr>
-						</thead>
-						<tr>
-							<td class="check"><input type="checkbox"></td>
+				<td class="item">TEST on Chaper 12</td>
 
-							<td class="item">Book p.432#5-25(odds),6,10,50-60(evens)</td>
+				<td class="course"><span class="label label-primary">AAA</span></td>
 
-							<td class="course"><span class="label label-primary">AAA</span></td>
+				<td class="date">02/10</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-md-6">
+	<h4>Past Assignments</h4>
+		<table class="table table-striped table-hover">
+			<!-- TODO Make the table scrollable -->
+			<!-- TODO Make the table re-sort able -->
+			<thead>
+				<tr>
+					<th>Title</th>
 
-							<td class="date">02/06</td>
-						</tr>
-						<tr>
-							<td class="check"><input type="checkbox"></td>
+					<th>Percent</th>
+					<th>Points</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tr>
+				<td>Chapter 12 Homework</td>
 
-							<td class="item">TEST on Chaper 12</td>
+				<td class="percent">100%</td>
+				<td class="frac">20/20</td>
+				<td class="date">02/05</td>
+			</tr>
+			<tr>
+				<td>Chapter 12 TEST</td>
 
-							<td class="course"><span class="label label-primary">AAA</span></td>
+				<td class="percent">96.67%</td>
+				<td class="frac">58/60</td>
+				<td class="date">02/05</td>
+			</tr>
+			<tr>
+				<td>Chapter 13.2 Quiz</td>
 
-							<td class="date">02/10</td>
-						</tr>
-					</table>
-				</div>
-				<div class="col-md-6">
-				<h4>Past Assignments</h4>
-					<table class="table table-striped table-hover">
-						<!-- TODO Make the table scrollable -->
-						<!-- TODO Make the table re-sort able -->
-						<thead>
-							<tr>
-								<th>Title</th>
-								
-								<th>Percent</th>
-								<th>Points</th>
-								<th>Date</th>
-							</tr>
-						</thead>
-						<tr>
-							<td>Chapter 12 Homework</td>
-							
-							<td class="percent">100%</td>
-							<td class="frac">20/20</td>
-							<td class="date">02/05</td>
-						</tr>
-						<tr>
-							<td>Chapter 12 TEST</td>
-							
-							<td class="percent">96.67%</td>
-							<td class="frac">58/60</td>
-							<td class="date">02/05</td>
-						</tr>
-						<tr>
-							<td>Chapter 13.2 Quiz</td>
-							
-							<td class="percent">100%</td>
-							<td class="frac">30/30</td>
-							<td class="date">02/07</td>
-						</tr>
-						<tr>
-							<td>Chapter 13 Homework</td>
-							
-							<td class="percent">100%</td>
-							<td class="frac">22/22</td>
-							<td class="date">02/10</td>
-						</tr>
-						<tr>
-							<td>Chapter 13 TEST</td>
-							
-							<td class="percent">98.33%</td>
-							<td class="frac">59/60</td>
-							<td class="date">02/10</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-			
-			<hr>
+				<td class="percent">100%</td>
+				<td class="frac">30/30</td>
+				<td class="date">02/07</td>
+			</tr>
+			<tr>
+				<td>Chapter 13 Homework</td>
 
-			<footer>
-				<p><b>Made with &lt;3 by Will Franzen and friends &middot; Check out the source code on <a href="https://github.com/LFHS/CenterScout/">GitHub</a>!</b></p>
-			</footer>
-		</div>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.js"><\/script>')</script>
-		<script src="js/vendor/bootstrap.min.js"></script>
-		<script src="js/vendor/konami.js"></script>
-		<script src="js/main.js"></script>
-		<script>
-			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-			g.src='//www.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g,s)}(document,'script'));
-		</script>
-	</body>
-</html>
+				<td class="percent">100%</td>
+				<td class="frac">22/22</td>
+				<td class="date">02/10</td>
+			</tr>
+			<tr>
+				<td>Chapter 13 TEST</td>
+
+				<td class="percent">98.33%</td>
+				<td class="frac">59/60</td>
+				<td class="date">02/10</td>
+			</tr>
+		</table>
+	</div>
+</div>
