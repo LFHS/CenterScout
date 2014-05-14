@@ -48,7 +48,7 @@ TODO
   - Beta keys
   - Database of user's completed assignments
   - Automatic assignment-grade association
-  - ~~Choose templating engine~~ Handlebars.
+  - ~~Choose templating engine~~ *Handlebars*.
   - Rewrite UI in above templating engine.
 - App
   - Convert website into Cordova/PhoneGap project for App Store distribution
