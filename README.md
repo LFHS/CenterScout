@@ -49,7 +49,7 @@ TODO
   - Database of user's completed assignments
   - Automatic assignment-grade association
   - ~~Choose templating engine~~ *Handlebars*.
-  - Rewrite UI in above templating engine.
+  - ~~Rewrite UI in above templating engine.~~
 - App
   - Convert website into Cordova/PhoneGap project for App Store distribution
   - Student ID PassBook pass
