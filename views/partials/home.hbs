@@ -3,69 +3,26 @@
         <h2>Assignments</h2>
 
         <table class="table table-striped">
-            <tr>
-                <td class="check"><input type="checkbox"></td>
-                <td class="item">Read p.325-330</td>
-                <td class="course"><span class="label label-primary">WC</span></td>
-                <td class="date">02/05</td>
-            </tr>
-
-            <tr>
-                <td class="check"><input type="checkbox"></td>
-                <td class="item">Book p.432#5-25(odds),6,10,50-60(evens)</td>
-                <td class="course"><span class="label label-primary">AAA</span></td>
-                <td class="date">02/06</td>
-            </tr>
-
-            <tr>
-                <td class="check"><input type="checkbox" checked="yes"></td>
-                <td class="item done">Write me a letter about health</td>
-                <td class="course"><span class="label label-primary">He</span></td>
-                <td class="date">02/07</td>
-            </tr>
-
-            <tr>
-                <td class="check"><input type="checkbox"></td>
-                <td class="item">Writing Workshop 4 due!</td>
-                <td class="course"><span class="label label-primary">E1CP</span></td>
-                <td class="date">02/08</td>
-            </tr>
-
-            <tr>
-                <td class="check"><input type="checkbox"></td>
-                <td class="item">Read p.330-332</td>
-                <td class="course"><span class="label label-primary">WC</span></td>
-                <td class="date">02/09</td>
-            </tr>
-
-            <tr>
-                <td class="check"><input type="checkbox"></td>
-                <td class="item">TEST on Chaper 12</td>
-                <td class="course"><span class="label label-primary">AAA</span></td>
-                <td class="date">02/10</td>
-            </tr>
+            {{#each assignments}}
+                <tr>
+                    <td class="check"><input type="checkbox" {{isChecked}}></td>
+                    <td class="item">{{title}}</td>
+                    <td class="course"><span class="label label-primary">{{class}}</span></td>
+                    <td class="date">{{date}}</td>
+                </tr>
+            {{/each}}
         </table>
 
         <h2>News</h2>
 
         <table class="table table-striped">
-            <tr>
-                <td class="check"><span>&bull;</span></td>
-                <td class="item"><a href="news?id=">CenterScout Public Beta Now Open!</a></td>
-                <td class="date">02/05</td>
-            </tr>
-
-            <tr>
-                <td class="check"><span>&bull;</span></td>
-                <td class="item"><a href="news?id=">E-Day tomorrow! Everything you need to know</a></td>
-                <td class="date">02/04</td>
-            </tr>
-
-            <tr>
-                <td class="check"><span>&bull;</span></td>
-                <td class="item"><a href="news?id=">Congradulations to all CenterScout Private Beta Testers! Click here to give feedback on the site.</a></td>
-                <td class="date">01/27</td>
-            </tr>
+            {{#each news}}
+                <tr>
+                    <td class="check"><span>&bull;</span></td>
+                    <td class="item"><a href="news?id={{id}}">{{title}}</a></td>
+                    <td class="date">{{data}}</td>
+                </tr>
+            {{/each}}
         </table>
     </div>
 
@@ -84,49 +41,38 @@
         <div class="row">
             <div class="col-md-2">
                 <div class="btn-group">
-                    <button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button">AAA <span class="caret"></span></button>
+                    <button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button">{{selectedCourse title}} <span class="caret"></span></button>
 
                     <ul class="dropdown-menu">
-                        <li class="active"><a href="#">AAA</a></li>
-
-                        <li><a href="#">E1CP</a></li>
-
-                        <li><a href="#">CAD-E</a></li>
-
-                        <li><a href="#">Health</a></li>
-
-                        <li><a href="#">WC</a></li>
-
-                        <li><a href="#">FR2</a></li>
-
-                        <li><a href="#">BIO1CP</a></li>
+                        {{#each course}}
+                            <li {{isActive}}><a href="#">{{title}}</a></li>
+                        {{/each}}
                     </ul>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="courseinfo">
-                    A
+                    {{selectedCourse letter}}
                 </div>
                 </div>
 
             <div class="col-md-2">
                 <div class="courseinfo">
-                    97.3%
+                    {{selectedCourse percent}}
                 </div>
             </div>
 
             <div class="col-md-2">
                 <div class="courseinfo">
-                    5.0
+                    {{selectedCourse gp}}
                 </div>
             </div>
 
             <div class="col-md-offset-1 col-md-3">
                 <div class="courseinfo">
-                    <a href="class.html">More details</a>
+                    <a href="/class?id={{selectedCourse id}}">More details</a>
                 </div>
             </div>
         </div>
-        <hr class="small">
     </div>
 </div>
