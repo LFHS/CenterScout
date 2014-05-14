@@ -5,32 +5,16 @@
 <div id="classInfo" class="row">
 	<div class="col-md-1">
 		<div class="btn-group">
-			<button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" type="button">AAA <span class="caret"></span></button>
+			<button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button">{{selectedCourse title}} <span class="caret"></span></button>
 
 			<ul class="dropdown-menu">
-				<li class="active"><a href="#">AAA</a></li>
-
-				<li onclick="class2()"><a href="#">E1CP</a></li>
-
-				<li><a href="#">CAD-E</a></li>
-
-				<li><a href="#">Health</a></li>
-
-				<li><a href="#">WC</a></li>
-
-				<li><a href="#">FR2</a></li>
-
-				<li><a href="#">BIO</a></li>
+				{{#each courses}}
+					<li class="{{isActive}}"><a href="#">{{title}}</a></li>
+				{{/each}}
 			</ul>
 		</div>
 	</div>
-
-	<!-- div class="col-md-11">
-		<a href="mailto:kwilhelm@lfschools.net">Kyle Wilhelm <span class="glyphicon glyphicon-send"></span></a>
-	</div> -->
-
-	<p>Kleeman- Advanced Algebra Accelerated, Period 7</p>
-
+	<p>{{selectedCourse title}}</p>
 </div>
 
 <hr>
@@ -43,29 +27,18 @@
 				<tr>
 					<th><span class="glyphicon glyphicon-ok"></span></th>
 					<th>Title</th>
-
 					<th>Class</th>
 					<th>Date</th>
 				</tr>
 			</thead>
-			<tr>
-				<td class="check"><input type="checkbox"></td>
-
-				<td class="item">Book p.432#5-25(odds),6,10,50-60(evens)</td>
-
-				<td class="course"><span class="label label-primary">AAA</span></td>
-
-				<td class="date">02/06</td>
-			</tr>
-			<tr>
-				<td class="check"><input type="checkbox"></td>
-
-				<td class="item">TEST on Chaper 12</td>
-
-				<td class="course"><span class="label label-primary">AAA</span></td>
-
-				<td class="date">02/10</td>
-			</tr>
+			{{#each assignments}}
+				<tr>
+					<td class="check"><input type="checkbox" {{isChecked}}></td>
+					<td class="item">{{title}}</td>
+					<td class="course"><span class="label label-primary">{{class}}</span></td>
+					<td class="date">{{date}}</td>
+				</tr>
+			{{/each}}
 		</table>
 	</div>
 	<div class="col-md-6">
@@ -76,47 +49,19 @@
 			<thead>
 				<tr>
 					<th>Title</th>
-
 					<th>Percent</th>
 					<th>Points</th>
 					<th>Date</th>
 				</tr>
 			</thead>
-			<tr>
-				<td>Chapter 12 Homework</td>
-
-				<td class="percent">100%</td>
-				<td class="frac">20/20</td>
-				<td class="date">02/05</td>
-			</tr>
-			<tr>
-				<td>Chapter 12 TEST</td>
-
-				<td class="percent">96.67%</td>
-				<td class="frac">58/60</td>
-				<td class="date">02/05</td>
-			</tr>
-			<tr>
-				<td>Chapter 13.2 Quiz</td>
-
-				<td class="percent">100%</td>
-				<td class="frac">30/30</td>
-				<td class="date">02/07</td>
-			</tr>
-			<tr>
-				<td>Chapter 13 Homework</td>
-
-				<td class="percent">100%</td>
-				<td class="frac">22/22</td>
-				<td class="date">02/10</td>
-			</tr>
-			<tr>
-				<td>Chapter 13 TEST</td>
-
-				<td class="percent">98.33%</td>
-				<td class="frac">59/60</td>
-				<td class="date">02/10</td>
-			</tr>
+			{{#each grade}}
+				<tr>
+					<td>{{title}}/td>
+					<td class="percent">{{percent}}</td>
+					<td class="frac">{{score}}</td>
+					<td class="date">{{date}}</td>
+				</tr>
+			{{/each}}
 		</table>
 	</div>
 </div>
