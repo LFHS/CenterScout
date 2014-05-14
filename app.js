@@ -22,7 +22,7 @@ var app = express();
 // Default port is 8080
 app.set('port', process.env.PORT || 8080);
 
-// Define views/ and public/ folders
+// Define views/ and static/ folders
 app.set('views', './views');
 app.use(express.static('./static'));
 
