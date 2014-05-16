@@ -32,7 +32,7 @@ TODO
 - UI Design
   - Login Page
   - ~~Home Page~~
-  - Individual Class Page
+  - ~~Individual Class Page~~
   - Settings Page
   - ~~About Page~~
 - Front-end
