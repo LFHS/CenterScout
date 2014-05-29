@@ -1,19 +1,29 @@
-var CenterScout = angular.module('CenterScout', []);
+var CenterScout = angular.module('CenterScout', ['ngRoute']);
 
 CenterScout.config(function($routeProvider) {
-    $routeProvider.when('/', {
+    $routeProvider.when('/home2', {
         controller: 'HomeController',
-        templateUrl: '/views/home/home.html'
+        templateUrl: '/views/home.html'
+    });
+
+    $routeProvider.when('/home', {
+        controller: 'HomeController',
+        templateUrl: '/views/home.html'
     });
 
     $routeProvider.when('/class', {
         controller: 'ClassController',
-        templateUrl: '/views/class/class.html'
+        templateUrl: '/views/class.html'
     });
 
-    $routeProvider.when('/about', {
+    $routeProvider.when('/', {
         controller: 'AboutController',
-        templateUrl: '/views/about/about.html'
+        templateUrl: '/views/about.html'
+    });
+
+    $routeProvider.when('/404', {
+        controller: 'ErrorController',
+        templateUrl: '/views/404.html'
     });
 
     $routeProvider.otherwise({
