@@ -98,3 +98,13 @@ body {
 #mainView {
     margin-top: 30px;
 }
+
+.gradeSelector {
+    float: right;
+    position: relative;
+    top: -45px;
+}
+
+.gradeSelector .dropdown-menu {
+     left: -100px;
+}
