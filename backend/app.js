@@ -14,6 +14,9 @@ var powernode = require('./lib/powernode');
  
 var config  = JSON.parse(fs.readFileSync('config.json'));
 var secrets = JSON.parse(fs.readFileSync('secrets.json'));
+var version = JSON.parse(fs.readFileSync('package.json')).version;
+
+powernode.setAppString('CenterScout v' + version);
 
 /*
  *    ExpressJS Setup
