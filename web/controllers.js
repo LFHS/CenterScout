@@ -7,6 +7,12 @@ CenterScout.controller('HomeController', ['$scope', function($scope) {
             'date':  '02/05'
         },
         {
+            'done':  true,
+            'name':  'Writing Workshop #3',
+            'class': 'E',
+            'date':  '06/02'
+        },
+        {
             'done':  false,
             'name':  'WS p.524#1-10',
             'class': 'M',
