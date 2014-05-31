@@ -20,6 +20,24 @@ CenterScout.controller('HomeController', ['$scope', function($scope) {
         }
     ];
 
+    $scope.grades = [
+        {
+            'name':  'Chapter 12 TEST',
+            'class': 'M',
+            'date':  '02/15'
+        },
+        {
+            'name':  'WS p.524#1-10',
+            'class': 'M',
+            'date':  '05/29'
+        },
+        {
+            'name':  'CAD Presentation',
+            'class': 'CAD',
+            'date':  '05/30'
+        }
+    ];
+
     $scope.classes = [
         'M',
         'E',
