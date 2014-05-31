@@ -35,8 +35,8 @@
         <table class="table table-striped">
             <tr ng-repeat="grade in grades">
                 <td class="item" ng-class="{done: assignment.done}">{{ grade.name }}</td>
-                <td class="frac">{{"49/50"}}</td>
-                <td class="percent">{{"98%"}}</td>
+                <td class="frac">{{ grade.fraction }}</td>
+                <td class="percent">{{ grade.percent }}</td>
                 <td class="course"><span class="label label-primary">{{ grade.class }}</span></td>
                 <td class="date">{{ grade.date }}</td>
             </tr>

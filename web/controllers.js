@@ -24,17 +24,23 @@ CenterScout.controller('HomeController', ['$scope', function($scope) {
         {
             'name':  'Chapter 12 TEST',
             'class': 'M',
-            'date':  '02/15'
+            'date':  '02/15',
+            'percent': '98%',
+            'fraction': '49/50'
         },
         {
-            'name':  'WS p.524#1-10',
+            'name':  'Chapter 12 Homework',
             'class': 'M',
-            'date':  '05/29'
+            'date':  '05/29',
+            'percent': '100%',
+            'fraction': '24/24'
         },
         {
-            'name':  'CAD Presentation',
+            'name':  'Chapter 12.3 Quiz',
             'class': 'CAD',
-            'date':  '05/30'
+            'date':  '05/30',
+            'percent': '86%',
+            'fraction': '26/30'
         }
     ];
 
