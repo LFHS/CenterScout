@@ -4,7 +4,7 @@
         <h2>Assignments</h2>
         <table class="table table-striped">
             <tr ng-repeat="assignment in assignments">
-                <td class="check"><input type="checkbox" ng-checked="assignment.done"></td>
+                <td class="check"><input type="checkbox" ng-checked="assignment.done" ng-model="assignment.done"></td>
                 <td class="item" ng-class="{done: assignment.done}">{{ assignment.name }}</td>
                 <td class="course"><span class="label label-primary">{{ assignment.class }}</span></td>
                 <td class="date">{{ assignment.date }}</td>
