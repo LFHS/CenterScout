@@ -25,7 +25,7 @@ td.check {
 	text-align: center;
 }
 td.check input {
-	margin: 0;	
+	margin: 0;
 }
 
 td.item {
@@ -90,4 +90,11 @@ hr.small {
 	position: absolute;
 	left: 52%;
 	font-weight: bold;
+}
+body {
+        padding-top: 50px;
+        padding-bottom: 20px;    }
+
+#mainView {
+    margin-top: 30px;
 }
