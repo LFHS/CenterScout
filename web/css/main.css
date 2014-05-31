@@ -102,10 +102,20 @@ body {
 
 .gradeSelector {
     float: right;
-    position: relative;
-    top: -45px;
+    position: absolute;
+    top: 20px;
+	right: 15px;
 }
 
 .gradeSelector .dropdown-menu {
      left: -100px;
+}
+
+#logo {
+    position: fixed; top: 0px; left: 3px; height: 60px
+}
+@media (max-width: 875px) {
+    #logo {
+        display: none;
+    }
 }
