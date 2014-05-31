@@ -1,7 +1,7 @@
 var CenterScout = angular.module('CenterScout', ['ngRoute']);
 
 CenterScout.config(function($routeProvider) {
-    $routeProvider.when('/home2', {
+    $routeProvider.when('/', {
         controller: 'HomeController',
         templateUrl: '/views/home.html'
     });
@@ -16,7 +16,7 @@ CenterScout.config(function($routeProvider) {
         templateUrl: '/views/class.html'
     });
 
-    $routeProvider.when('/', {
+    $routeProvider.when('/about', {
         controller: 'AboutController',
         templateUrl: '/views/about.html'
     });
