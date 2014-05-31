@@ -17,7 +17,17 @@ CenterScout.controller('HomeController', ['$scope', function($scope) {
             'name':  'CAD Presentation',
             'class': 'CAD',
             'date':  '05/30'
-        },
+        }
+    ];
+
+    $scope.classes = [
+        'M',
+        'E',
+        'CAD',
+        'HE',
+        'WC',
+        'FR',
+        'BIO'
     ];
 }]);
 

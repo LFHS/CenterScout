@@ -30,14 +30,9 @@
                 <button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button">AAA <span class="caret"></span></button>
 
                 <ul class="dropdown-menu">
-                    <li class="active"><a href="#">M</a></li>
-                    <li><a href="#">E</a></li>
-                    <li><a href="#">CAD</a></li>
-                    <li><a href="#">HE</a></li>
-                    <li><a href="#">WC</a></li>
-                    <li><a href="#">FR</a></li>
-                    <li><a href="#">BIO</a></li>
+                    <li ng-repeat="class in classes"><a href="#">{{ class }}</a></li>
                 </ul>
+
             </div>
         </div>
 
