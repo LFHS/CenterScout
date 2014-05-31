@@ -55,7 +55,7 @@ app.get('/api/assignments', function(req, res) {
  */
  
 // Create and start HTTP server
-// TODO: Use HTTPS
+// TODO: Use HTTPS http://nodejs.org/api/https.html#https_https_createserver_options_requestlistener
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Server started.');
 });
