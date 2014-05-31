@@ -31,10 +31,10 @@ TODO
 
 - UI Design
   - Login Page
-  - Home Page
-  - Individual Class Page
+  - ~~Home Page~~
+  - ~~Individual Class Page~~
   - Settings Page
-  - About Page
+  - ~~About Page~~
 - Front-end
   - Data transfer between client and server
   - Table reordering and coloring

@@ -1,16 +1,22 @@
 /*
  *    Modules
  */
+ 
 var express = require('express');
-var consolidate = require('consolidate');
+var Q = require('q');
 var http = require('http');
 var fs = require('fs');
+var powernode = require('./lib/powernode');
 
 /*
  *    Configuration
  */
- var config  = JSON.parse(fs.readFileSync('config.json'));
- var secrets = JSON.parse(fs.readFileSync('secrets.json'));
+ 
+var config  = JSON.parse(fs.readFileSync('config.json'));
+var secrets = JSON.parse(fs.readFileSync('secrets.json'));
+var version = JSON.parse(fs.readFileSync('package.json')).version;
+
+powernode.setAppString('CenterScout v' + version);
 
 /*
  *    ExpressJS Setup
@@ -22,95 +28,37 @@ var app = express();
 // Default port is 8080
 app.set('port', process.env.PORT || 8080);
 
-// Define views/ and static/ folders
-app.set('views', './views');
+// Define static/ folder
 app.use(express.static('./static'));
-
-// Setup HandlebarsJS as templating engine
-app.engine('hbs', consolidate.handlebars);
-app.set('view engine', 'hbs');
 
 // Middleware for POST requests
 app.use(express.json());
 
-// Sessions
-app.use(express.session({
-    'key': 'app.session',
-    'secret': secrets.sessions
-}));
-
 /*
  *    API Endpoints
  */
-
-// Attempt to log the user in
-app.post('/api/login', function(req, res) {
+ 
+// Get PowerSchool(R) data
+app.get('/api/grades', function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
-    var remember = req.body.remember;
-
-
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    powernode
+        .getStudentData('chsd115.lfschools.net', username, password)
+        .then(JSON.stringify).then(res.end);
 });
 
-// Get a list of classes and basic information about each
-app.get('/api/grade/class/list', function(req, res) {
-
-});
-
-// Get grades for a classes
-app.get('/api/grade/class/detail', function(req, res) {
-
-});
-
-/*
- *    Web endpoints
- */
-
- // Redirect to Login or Homepage
- app.get('/', function(req, res) {
-     if(req.session.loggedIn) {
-         res.writeHead(302, { 'location': '/home' });
-     } else {
-         res.writeHead(302, { 'location': '/login' });
-     }
-     res.end();
- });
-
-// Login
-app.get('/login', function(req, res) {
-    res.render('login', {});
-});
-
-// Homepage
-app.get('/home', function(req, res) {
-    res.render('home', {});
-});
-
-// Class List
-app.get('/classes', function(req, res) {
-
-});
-
-// About
-app.get('/about', function(req, res) {
-    res.render('about');
-});
-
-// Grades
-app.get('/grades', function(req, res) {
-
-});
-
-// Assignments
-app.get('/assignments', function(req, res) {
+// Get assignments from www.lakeforestschools.org
+app.get('/api/assignments', function(req, res) {
 
 });
 
 /*
  *    NodeJS Setup
  */
-
+ 
 // Create and start HTTP server
+// TODO: Use HTTPS http://nodejs.org/api/https.html#https_https_createserver_options_requestlistener
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Server started.');
 });
