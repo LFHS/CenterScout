@@ -8,5 +8,6 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
+    <preference name="DisallowOverscroll" value="true" />
     <access origin="*" />
 </widget>
