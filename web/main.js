@@ -1,5 +1,3 @@
-var CenterScout = angular.module('CenterScout', ['ngRoute']);
-
 CenterScout.config(function($routeProvider) {
     $routeProvider.when('/', {
         controller: 'HomeController',
