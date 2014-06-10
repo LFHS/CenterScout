@@ -28,3 +28,6 @@ CenterScout.config(function($routeProvider) {
         redirectTo: '/404'
     });
 });
+
+if(isCordova())
+    $('body').addClass('cordova');
