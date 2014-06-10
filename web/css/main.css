@@ -121,8 +121,3 @@ body {
 	position: relative;
 	top: -20px;
 }
-@media (max-width: 875px) {
-    #logo {
-        display: none;
-    }
-}
