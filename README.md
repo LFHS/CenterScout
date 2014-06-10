@@ -41,7 +41,7 @@ TODO
   - Appcache for offline use
   - Custom class tagging
 - Server
-  - **PowerSchool Node.js API**
+  - **PowerSchool Node.js API** ([PowerNode](https://github.com/wtfaremyinitials/PowerNode))
   - **http://lfhs.org API**
   - User signup
   - User authentication
