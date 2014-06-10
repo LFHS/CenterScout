@@ -51,7 +51,7 @@ TODO
   - ~~Choose templating engine~~ *Handlebars*.
   - ~~Rewrite UI in above templating engine.~~
 - App
-  - Convert website into Cordova/PhoneGap project for App Store distribution
+  - ~~Convert website into Cordova/PhoneGap project for App Store distribution~~
   - Student ID PassBook pass
     - Barcode
     - Picture
