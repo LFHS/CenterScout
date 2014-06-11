@@ -25,7 +25,7 @@ CenterScout.config(function($routeProvider) {
     });
 
     $routeProvider.otherwise({
-        redirectTo: '/404'
+        redirectTo: '/'
     });
 });
 
