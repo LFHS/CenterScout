@@ -31,3 +31,5 @@ CenterScout.config(function($routeProvider) {
 
 if(isCordova())
     $('body').addClass('cordova');
+
+$('body').nodoubletapzoom();
