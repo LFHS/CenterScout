@@ -126,6 +126,17 @@ body {
 	top: -20px;
 }
 
+.cordova-nav-padding {
+	display: none;
+
+	height: 19px;
+	border-bottom: 1px solid rgb(18, 143, 118);
+}
+
+.cordova .cordova-nav-padding {
+	display: block;
+}
+
 .cordova #mainView {
 	overflow-x: hidden;
 }
