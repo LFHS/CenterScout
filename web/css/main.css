@@ -125,3 +125,7 @@ body {
 	position: relative;
 	top: -20px;
 }
+
+.cordova #mainView {
+	overflow-x: hidden;
+}
