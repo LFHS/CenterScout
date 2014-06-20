@@ -9,6 +9,11 @@ CenterScout.config(function($routeProvider) {
         templateUrl: 'views/home.html'
     });
 
+    $routeProvider.when('/home/course/:course', {
+        controller: 'HomeController',
+        templateUrl: 'views/home.html'
+    });
+
     $routeProvider.when('/class', {
         controller: 'ClassController',
         templateUrl: 'views/class.html'

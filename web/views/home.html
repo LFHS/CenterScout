@@ -25,15 +25,19 @@
 
         <h2>Grades</h2>
         <div class="gradeSelector">
-            <div class="btn-group">
-                <button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button">AAA <span class="caret"></span></button>
+            <div class="btn-group" ng-class="{courseSelectorOpen: open}">
+                <button class="btn btn-sm dropdown-toggle" data-toggle="dropdown" ng-click="courseSelectorOpen=!courseSelectorOpen">
+                    {{ selectedCourse }} <span class="caret"></span>
+                </button>
                 <ul class="dropdown-menu">
-                    <li ng-repeat="class in classes"><a href="#">{{ class }}</a></li>
+                    <li ng-repeat="course in courses">
+                        <a ng-click="setSelectedCourse()">{{ course }}</a>
+                    </li>
                 </ul>
             </div>
         </div>
         <table class="table table-striped">
-            <tr ng-repeat="grade in grades">
+            <tr ng-repeat="grade in grades | filter:selectedCourse">
                 <td class="item" ng-class="{done: assignment.done}">{{ grade.name }}</td>
                 <td class="frac">{{ grade.fraction }}</td>
                 <td class="percent">{{ grade.percent }}</td>

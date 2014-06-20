@@ -1,64 +1,28 @@
-CenterScout.controller('HomeController', ['$scope', function($scope) {
-    $scope.assignments = [
-        {
-            'done':  false,
-            'name':  'Read p.325-330',
-            'class': 'WC',
-            'date':  '02/05'
-        },
-        {
-            'done':  true,
-            'name':  'Writing Workshop #3',
-            'class': 'E',
-            'date':  '06/02'
-        },
-        {
-            'done':  false,
-            'name':  'WS p.524#1-10',
-            'class': 'M',
-            'date':  '05/29'
-        },
-        {
-            'done':  true,
-            'name':  'CAD Presentation',
-            'class': 'CAD',
-            'date':  '05/30'
-        }
-    ];
+CenterScout.controller('HomeController', ['$scope', 'gradeData', 'assignmentData', function($scope, gradeData, assignmentData) {
 
-    $scope.grades = [
-        {
-            'name':  'Chapter 12 TEST',
-            'class': 'M',
-            'date':  '02/15',
-            'percent': '98%',
-            'fraction': '49/50'
-        },
-        {
-            'name':  'Chapter 12 Homework',
-            'class': 'M',
-            'date':  '05/29',
-            'percent': '100%',
-            'fraction': '24/24'
-        },
-        {
-            'name':  'Chapter 12.3 Quiz',
-            'class': 'CAD',
-            'date':  '05/30',
-            'percent': '86%',
-            'fraction': '26/30'
-        }
-    ];
+    $scope.grades = [{ name: 'Loading...', class: '', date: '', percent: '', fraction: ''}];
+    $scope.assignments = [{ done: false, name: 'Loading...', class: '', date: ''}]; // TODO: Find a better way of doing this hack
+    $scope.courses = ['M', 'CAD']; // TODO: Find a way to use the PowerSchool names for only the classes in lfhs.or
+    $scope.selectedCourse = '...';
 
-    $scope.classes = [
-        'M',
-        'E',
-        'CAD',
-        'HE',
-        'WC',
-        'FR',
-        'BIO'
-    ];
+    $scope.setSelectedCourse = function() {
+        $scope.selectedCourse = this.course;
+    };
+
+    gradeData().success(function(grades) {
+        $scope.grades = grades;
+
+        grades.forEach(function(grade) {
+            if($scope.courses.indexOf(grade.class) === -1)
+                $scope.courses.push(grade.class);
+        });
+        $scope.selectedCourse = $scope.courses[0];
+    }).error(handleError);
+
+    assignmentData().success(function(assignments) {
+        $scope.assignments = assignments;
+    }).error(handleError);
+
 }]);
 
 CenterScout.controller('ClassController', ['$scope', function($scope) {
