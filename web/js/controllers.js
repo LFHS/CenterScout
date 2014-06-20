@@ -17,11 +17,11 @@ CenterScout.controller('HomeController', ['$scope', 'gradeData', 'assignmentData
                 $scope.courses.push(grade.class);
         });
         $scope.selectedCourse = $scope.courses[0];
-    });
+    }).error(handleError);
 
     assignmentData().success(function(assignments) {
         $scope.assignments = assignments;
-    });
+    }).error(handleError);
 
 }]);
 
