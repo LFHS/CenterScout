@@ -19,12 +19,12 @@ Technologies
 - Flatly Bootstrap theme
 - jQuery
 - Intro.js
-- Modernizr
 - Node.js
 - Git
 - konami.js
-- PhoneGap
+- Cordova
 - PassBook
+- AngularJS
 
 TODO
 ====
