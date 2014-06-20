@@ -36,8 +36,8 @@ TODO
   - Settings Page
   - ~~About Page~~
 - Front-end
-  - Data transfer between client and server
-  - Table reordering and coloring
+  - ~~Data transfer between client and server~~
+  - ~~Table reordering and coloring~~
   - Appcache for offline use
   - Custom class tagging
 - Server
@@ -58,6 +58,7 @@ TODO
     - Shows up on lock screen when in library or cafeteria
     - Looks like real ID
   - PassBook pass installer built in to the app
+  - iOS 8 assignments To-Do widget
 
 Contributors
 ============
