@@ -55,11 +55,26 @@ var data = [
         },
         {
             'name':  'Chapter 12.3 Quiz',
-            'class': 'CAD',
+            'class': 'M',
             'date':  '05/30',
             'percent': '86%',
             'fraction': '26/30'
-        }
+        },
+        {
+            'name':  'Phone Case Project',
+            'class': 'CAD',
+            'date':  '06/01',
+            'percent': '100%',
+            'fraction': '30/30'
+        },
+        {
+            'name':  'Machine Vise Project',
+            'class': 'CAD',
+            'date':  '03/16',
+            'percent': '100%',
+            'fraction': '30/30'
+        },
+        
     ];
 
 // Get PowerSchool(R) data
