@@ -1,4 +1,4 @@
-CenterScout.factory('gradeData', ['$http', '$q', function($http, $q) {
+CenterScout.factory('GradeData', ['$http', '$q', function($http, $q) {
     var grades = null;
 
     return function() {
@@ -21,7 +21,7 @@ CenterScout.factory('gradeData', ['$http', '$q', function($http, $q) {
     };
 }]);
 
-CenterScout.factory('assignmentData', ['$http', '$q', function($http, $q) {
+CenterScout.factory('AssignmentData', ['$http', '$q', function($http, $q) {
     var assignments = null;
 
     return function() {

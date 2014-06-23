@@ -1,4 +1,4 @@
-CenterScout.controller('HomeController', ['$scope', 'gradeData', 'assignmentData', function($scope, gradeData, assignmentData) {
+CenterScout.controller('HomeController', ['$scope', 'GradeData', 'AssignmentData', function($scope, GradeData, AssignmentData) {
 
     $scope.grades = [{ name: 'Loading...', class: '', date: '', percent: '', fraction: ''}];
     $scope.assignments = [{ done: false, name: 'Loading...', class: '', date: ''}]; // TODO: Find a better way of doing this hack
@@ -17,12 +17,12 @@ CenterScout.controller('HomeController', ['$scope', 'gradeData', 'assignmentData
         $scope.selectedCourse = $scope.courses[0];
     };
 
-    gradeData().then(function(grades) {
+    GradeData().then(function(grades) {
         $scope.grades = grades;
         updateClassList(grades);
     }, handleError);
 
-    assignmentData().then(function(assignments) {
+    AssignmentData().then(function(assignments) {
         $scope.assignments = assignments;
     }, handleError);
 
