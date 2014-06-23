@@ -37,7 +37,7 @@
             </div>
         </div>
         <table class="table table-striped">
-            <tr ng-repeat="grade in grades | filter:selectedCourse">
+            <tr ng-repeat="grade in grades | filter:{ class: selectedCourse }">
                 <td class="item" ng-class="{done: assignment.done}">{{ grade.name }}</td>
                 <td class="frac">{{ grade.fraction }}</td>
                 <td class="percent">{{ grade.percent }}</td>
