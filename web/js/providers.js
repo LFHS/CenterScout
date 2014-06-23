@@ -4,8 +4,6 @@ CenterScout.factory('gradeData', ['$http', '$q', function($http, $q) {
     return function() {
         var deferred = $q.defer();
 
-        console.log(deferred);
-
         if(grades) {
             deferred.resolve(grades);
         } else {
