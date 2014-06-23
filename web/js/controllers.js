@@ -9,7 +9,7 @@ CenterScout.controller('HomeController', ['$scope', 'gradeData', 'assignmentData
         $scope.selectedCourse = this.course;
     };
 
-    gradeData().success(function(grades) {
+    gradeData().then(function(grades) {
         $scope.grades = grades;
 
         grades.forEach(function(grade) {
@@ -17,11 +17,11 @@ CenterScout.controller('HomeController', ['$scope', 'gradeData', 'assignmentData
                 $scope.courses.push(grade.class);
         });
         $scope.selectedCourse = $scope.courses[0];
-    }).error(handleError);
+    }, handleError);
 
-    assignmentData().success(function(assignments) {
+    assignmentData().then(function(assignments) {
         $scope.assignments = assignments;
-    }).error(handleError);
+    }, handleError);
 
 }]);
 

@@ -1,11 +1,47 @@
-CenterScout.factory('gradeData', ['$http', function($http) {
+CenterScout.factory('gradeData', ['$http', '$q', function($http, $q) {
+    var grades = null;
+
     return function() {
-        return $http.get('http://localhost:8080/api/grades');
+        var deferred = $q.defer();
+
+        console.log(deferred);
+
+        if(grades) {
+            deferred.resolve(grades);
+        } else {
+            $http.get('http://localhost:8080/api/grades')
+                .success(function(gradeData) {
+                    grades = gradeData;
+                    deferred.resolve(grades);
+                })
+                .error(function(response) {
+                    deferred.reject(response);
+                });
+        }
+
+        return deferred.promise;
     };
 }]);
 
-CenterScout.factory('assignmentData', ['$http', function($http) {
+CenterScout.factory('assignmentData', ['$http', '$q', function($http, $q) {
+    var assignments = null;
+
     return function() {
-        return $http.get('http://localhost:8080/api/assignments');
+        var deferred = $q.defer();
+
+        if(assignments) {
+            deferred.resolve(assignments);
+        } else {
+            $http.get('http://localhost:8080/api/assignments')
+                .success(function(assignmentData) {
+                    assignments = assignmentData;
+                    deferred.resolve(assignments);
+                })
+                .error(function(response) {
+                    deferred.reject(response);
+                });
+        }
+
+        return deferred.promise;
     };
 }]);
