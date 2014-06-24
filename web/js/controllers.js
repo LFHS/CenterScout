@@ -11,7 +11,7 @@ CenterScout.controller('HomeController', ['$scope', 'GradeData', 'AssignmentData
 
     var updateClassList = function(grades) {
         grades.forEach(function(grade) {
-            if($scope.courses.indexOf(grade.class) === -1)
+            if(($scope.courses.indexOf(grade.class) === -1) && (grades.class.indexOf('Lunch') === -1))
                 $scope.courses.push(grade.class);
         });
         $scope.selectedCourse = $scope.courses[0];
