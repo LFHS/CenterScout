@@ -41,6 +41,10 @@
     outline: 0;
 }
 
+#login form.login input[value="Sign In"] {
+    height: 33px !important;
+}
+
 #login form.login .btn-group input {
     width: calc(100% - 25px);
 }
