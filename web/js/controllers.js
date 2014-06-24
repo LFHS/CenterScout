@@ -30,6 +30,10 @@ CenterScout.controller('HomeController', ['$scope', 'GradeData', 'AssignmentData
 
 CenterScout.controller('LoginController', ['$scope', 'AuthService', function($scope, AuthService) {
 
+    $scope.signIn = function() {
+        AuthService.signIn($scope.username, $scope.password);
+    };
+
 }]);
 
 CenterScout.controller('ClassController', ['$scope', function($scope) {
