@@ -43,3 +43,7 @@ CenterScout.factory('AssignmentData', ['$http', '$q', function($http, $q) {
         return deferred.promise;
     };
 }]);
+
+CenterScout.factory('AuthService', ['$http', '$q', function($http, $q) {
+    
+}]);
