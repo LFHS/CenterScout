@@ -45,5 +45,26 @@ CenterScout.factory('AssignmentData', ['$http', '$q', function($http, $q) {
 }]);
 
 CenterScout.factory('AuthService', ['$http', '$q', function($http, $q) {
-    
+    var username = '';
+    var password = '';
+
+    return {
+        isSignedIn: function() {
+            return (!!(password) && !!(username));
+        },
+        signIn: function(newUsername, newPassword) {
+            username = newUsername;
+            password = newPassword;
+        },
+        signOut: function() {
+            username = '';
+            password = '';
+        },
+        getUsername: function() {
+            return username;
+        },
+        getPassword: function() {
+            return password;
+        }
+    };
 }]);
