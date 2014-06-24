@@ -28,6 +28,10 @@ CenterScout.controller('HomeController', ['$scope', 'GradeData', 'AssignmentData
 
 }]);
 
+CenterScout.controller('LoginController', ['$scope', function($scope) {
+    
+}]);
+
 CenterScout.controller('ClassController', ['$scope', function($scope) {
 
 }]);
