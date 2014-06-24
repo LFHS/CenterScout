@@ -1,17 +1,14 @@
-body
-{
-    background: url('../img/schoolfront1.jpg') no-repeat center center fixed;
+#login {
+    background: url('../img/lfhs.jpg') no-repeat center center fixed;
     padding: 0;
     margin: 0;
 }
 
-.wrap
-{
+#login .wrap {
 	margin-top: 25%;
 }
 
-p.form-title
-{
+#login p.form-title {
     font-family: 'Open Sans' , sans-serif;
     font-size: 20px;
     font-weight: 600;
@@ -22,14 +19,12 @@ p.form-title
     letter-spacing: 4px;
 }
 
-form
-{
+#login form {
     width: 250px;
     margin: 0 auto;
 }
 
-form.login input[type="text"], form.login input[type="password"]
-{
+#login form.login input[type="text"], form.login input[type="password"] {
     width: 100%;
     margin: 0;
     padding: 5px 10px;
@@ -46,39 +41,34 @@ form.login input[type="text"], form.login input[type="password"]
     outline: 0;
 }
 
-form.login .btn-group input
-{
+#login form.login .btn-group input {
     width: calc(100% - 25px);
 }
 
-form.login .btn-group {
+#login form.login .btn-group {
 	width: 100%;
 }
 
-form.login input[type="submit"]:hover
-{
+#login form.login input[type="submit"]:hover {
     transition: background-color 0.5s ease;
 }
 
 
-form.login label, form.login>a
-{
+#login form.login label, form.login>a {
     font-size: 12px;
     font-weight: 400;
     color: #FFFFFF;
 }
 
-form.login>a
-{
+#login form.login>a {
     transition: color 0.5s ease;
 }
 
-form.login>a:hover
-{
+#login form.login>a:hover {
     color: #149c82;
 }
 
-.faux-item {
+#login .faux-item {
 	display: block;
 	padding: 3px 20px;
 	clear: both;
@@ -88,7 +78,7 @@ form.login>a:hover
 	white-space: nowrap;
 }
 
-.dropdown-menu.right {
+#login .dropdown-menu.right {
 	right: 0;
 	top: calc(100% - 2px);
 }
