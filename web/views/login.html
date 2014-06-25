@@ -3,12 +3,12 @@
 		<div class="col-md-12">
 			<div class="wrap">
 				<p class="form-title">Welcome to CenterScout</p>
-				<form  class="login">
+				<form ng-submit="signIn()" class="login">
 					<input ng-model="username" data-toggle="tooltip" data-placement="right" title="Your student ID number that you normally use to log in." placeholder="Student ID" type="text">
 					<input ng-model="password" data-toggle="tooltip" data-placement="right" title="The same password you would use to log in to PowerSchool&reg; with" placeholder="Password" type="password">
 
 					<div class="btn-group">
-						<input ng-click="signIn()" class="btn btn-success btn-sm" type="button" value="Sign In">
+						<input class="btn btn-success btn-sm" type="submit" value="Sign In">
 
 						<button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
 						      <span class="caret"></span>
