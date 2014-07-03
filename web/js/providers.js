@@ -43,3 +43,44 @@ CenterScout.factory('AssignmentData', ['$http', '$q', function($http, $q) {
         return deferred.promise;
     };
 }]);
+
+CenterScout.factory('AuthService', ['$http', '$q', function($http, $q) {
+    var username = '';
+    var password = '';
+
+    return {
+        isSignedIn: function() {
+            return (!!(password) && !!(username));
+        },
+        signIn: function(newUsername, newPassword) {
+            username = newUsername;
+            password = newPassword;
+        },
+        signOut: function() {
+            username = '';
+            password = '';
+        },
+        getUsername: function() {
+            return username;
+        },
+        getPassword: function() {
+            return password;
+        }
+    };
+}]);
+
+CenterScout.factory('Settings', [function() {
+    var getKeepLogin = function() {
+        return strToBool(localStorage.getItem('keepLogin'));
+    };
+
+    var setKeepLogin = function(value) {
+        localStorage.setItem('keepLogin', boolToStr(value));
+    };
+
+    return {
+        getKeepLogin: getKeepLogin,
+        setKeepLogin: setKeepLogin,
+    };
+
+}]);

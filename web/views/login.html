@@ -1,121 +1,30 @@
-<!DOCTYPE html>
+<div class="container" id="login">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="wrap">
+				<p class="form-title">Welcome to CenterScout</p>
+				<form ng-submit="signIn()" class="login">
+					<input ng-model="username" data-toggle="tooltip" data-placement="right" title="Your student ID number that you normally use to log in." placeholder="Student ID" type="text">
+					<input ng-model="password" data-toggle="tooltip" data-placement="right" title="The same password you would use to log in to PowerSchool&reg; with" placeholder="Password" type="password">
 
-<html class="no-js onehundred">
-	<head>
-		<meta charset="utf-8">
-		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+					<div class="btn-group">
+						<input class="btn btn-success btn-sm" type="submit" value="Sign In">
 
-		<title>CenterScout &middot; Login</title>
-		<meta content="" name="description">
-		<meta content="width=device-width" name="viewport">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<style>
-			body {
-					padding-top: 50px;
-					padding-bottom: 20px;
-				}
-		</style>
-		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-		<link href="css/main.css" rel="stylesheet">
-		<link href="css/login.css" rel="stylesheet">
-		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-	</head>
+						<button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
+						      <span class="caret"></span>
+						</button>
 
-	<body class="onehundred">
-		<!--[if lt IE 7]>
-			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-		<![endif]-->
-
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#"><img src="img/largeCS.png" style="position: fixed; top: 0px; left: 3px; height: 60px">CenterScout</a>
-				</div>
-
-				<div class="navbar-collapse collapse"></div>
+						<ul class="dropdown-menu right">
+							<li class="faux-item">Remember me for...</li>
+							<li><a href="#/login">10 minutes</a></li>
+							<li><a href="#/login">1 hour</a></li>
+							<li><a href="#/login">1 day</a></li>
+							<li><a href="#/login">1 week</a></li>
+							<li><a href="#/login">1 year</a></li>
+						</ul>
+					</div>
+				</form>
 			</div>
 		</div>
-		<div class="container onehundred">
-			<div class="row onehundred">
-				<div class="col-md-12 onehundred">
-					<div class="wrap">
-						<p class="form-title">WELCOME</p>
-						<form  class="login">
-							<input id="id_input" data-toggle="tooltip" data-placement="right" title="The number given to you by your school as identification" placeholder="Student ID" type="text">
-							<input id="pass_input" data-toggle="tooltip" data-placement="right" title="The same password you would use to log in to PowerSchool&reg; with" placeholder="Password" type="password">
-							
-							<input id="betakey" type="hidden">
-							<input id="rememberlength" type="hidden" value="w">
-							
-							<div class="btn-group">
-								<input class="btn btn-success btn-sm" onclick="javascript:$('#closedBetaModal').modal('show');" type="button" value="Sign In">
-								
-								<button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
-								      <span class="caret"></span>
-								</button>
-
-								<ul class="dropdown-menu right">
-									<li class="faux-item">Remember me for...</li>
-
-									<li class="remembermeitem"><a href="#">10 minutes</a></li>
-
-									<li class="remembermeitem"><a href="#">1 hour</a></li>
-
-									<li class="remembermeitem"><a href="#">1 day</a></li>
-
-									<li class="remembermeitem active"><a href="#">1 week</a></li>
-
-									<li class="remembermeitem"><a href="#">1 year</a></li>
-								</ul>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			
-			<footer style="color: white">
-				<p>Made with &lt;3 by Will Franzen and friends &middot; Check out the source code on <a href="https://github.com/LFHS/CenterScout/">GitHub</a>!</p>
-			</footer>
-		</div>
-
-		<div class="modal fade" id="closedBetaModal" tabindex="-1">
-			<div class="modal-dialog" style="left: 0px">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button class="close" data-dismiss="modal" type="button">&times;</button>
-
-						<h4 class="modal-title" id="closedBetaModalLabel">Closed Beta!</h4>
-					</div>
-
-					<div class="modal-body">
-						<p>Unfortunately CenterScout is currently in a closed-beta
-						phase, meaning only a limited number of people are allowed
-						to use and test CenterScout at this time. If you are one of
-						those people, please enter your beta key below. If you do
-						not have a beta key, you can click <a href="publicbeta.html">here</a> to
-						sign up to receive an email when CenterScout opens up to
-						public-beta.</p>
-						<hr>
-
-						<div class="form-group has-success has-feedback">
-							<label class="control-label" for="betakey">Please enter your beta key.</label>
-							<input class="form-control" id="betakey" placeholder="XXX-XXX-XXX" type="text">
-							<span class="glyphicon glyphicon-ok form-control-feedback"></span>
-						</div>
-					</div>
-
-					<div class="modal-footer">
-						<button class="btn btn-link" data-dismiss="modal" type="button">Cancel</button>
-						<button class="btn btn-success" type="button">Ok</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
-		<script> window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.js"><\/script>') </script>
-		<script src="js/vendor/bootstrap.min.js"></script>
-		<script src="js/vendor/konami.js"></script>
-		<script src="js/main.js"></script>
-		<script src="js/login.js"></script>
-	</body>
-</html>
+	</div>
+</div>

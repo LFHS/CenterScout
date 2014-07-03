@@ -28,6 +28,14 @@ CenterScout.controller('HomeController', ['$scope', 'GradeData', 'AssignmentData
 
 }]);
 
+CenterScout.controller('LoginController', ['$scope', 'AuthService', function($scope, AuthService) {
+
+    $scope.signIn = function() {
+        AuthService.signIn($scope.username, $scope.password);
+    };
+
+}]);
+
 CenterScout.controller('ClassController', ['$scope', function($scope) {
 
 }]);
@@ -38,4 +46,9 @@ CenterScout.controller('AboutController', ['$scope', function($scope) {
 
 CenterScout.controller('ErrorController', ['$scope', function($scope) {
 
+}]);
+
+CenterScout.controller('SettingsController', ['$scope', 'Settings', function($scope, Settings) {
+    $scope.$watch('generalKeepLogin', Settings.setKeepLogin);
+    $scope.generalKeepLogin = Settings.getKeepLogin();
 }]);
