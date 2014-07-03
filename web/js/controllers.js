@@ -49,5 +49,6 @@ CenterScout.controller('ErrorController', ['$scope', function($scope) {
 }]);
 
 CenterScout.controller('SettingsController', ['$scope', 'Settings', function($scope, Settings) {
-
+    $scope.$watch('generalKeepLogin', Settings.setKeepLogin);
+    $scope.generalKeepLogin = Settings.getKeepLogin();
 }]);
