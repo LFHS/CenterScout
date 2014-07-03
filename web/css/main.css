@@ -137,6 +137,18 @@ body {
 	display: block;
 }
 
+.cordova-only {
+	display: none;
+}
+.cordova .cordova-only {
+	display: block !important;
+}
+
 .cordova #mainView {
 	overflow-x: hidden;
+}
+
+.table-striped-inverted > tbody > tr:nth-child(even) > td,
+.table-striped-inverted > tbody > tr:nth-child(even) > th {
+	background-color: #f9f9f9;
 }
