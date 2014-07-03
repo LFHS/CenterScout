@@ -47,3 +47,7 @@ CenterScout.controller('AboutController', ['$scope', function($scope) {
 CenterScout.controller('ErrorController', ['$scope', function($scope) {
 
 }]);
+
+CenterScout.controller('SettingsController', ['$scope', 'Settings', function($scope, Settings) {
+
+}]);

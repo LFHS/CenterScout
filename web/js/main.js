@@ -14,6 +14,11 @@ CenterScout.config(function($routeProvider) {
         templateUrl: 'views/login.html'
     });
 
+    $routeProvider.when('/settings', {
+        controller: 'SettingsController',
+        templateUrl: 'views/settings.html'
+    });
+
     $routeProvider.when('/home/course/:course', {
         controller: 'HomeController',
         templateUrl: 'views/home.html'
