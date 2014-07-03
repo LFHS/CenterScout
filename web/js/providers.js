@@ -68,3 +68,19 @@ CenterScout.factory('AuthService', ['$http', '$q', function($http, $q) {
         }
     };
 }]);
+
+CenterScout.factory('Settings', [function() {
+    var getKeepLogin = function() {
+        return strToBool(localStorage.getItem('keepLogin'));
+    };
+
+    var setKeepLogin = function(value) {
+        localStorage.setItem('keepLogin', boolToStr(value));
+    };
+
+    return {
+        getKeepLogin: getKeepLogin,
+        setKeepLogin: setKeepLogin,
+    };
+
+}]);
