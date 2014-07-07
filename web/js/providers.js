@@ -45,26 +45,23 @@ CenterScout.factory('AssignmentData', ['$http', '$q', function($http, $q) {
 }]);
 
 CenterScout.factory('AuthService', ['$http', '$q', function($http, $q) {
-    var username = '';
-    var password = '';
-
     return {
         isSignedIn: function() {
-            return (!!(password) && !!(username));
+            return !!localStorage.getItem('username') && !!localStorage.getItem('password');
         },
         signIn: function(newUsername, newPassword) {
-            username = newUsername;
-            password = newPassword;
+            localStorage.setItem('username', newUsername);
+            localStorage.setItem('password', newPassword);
         },
         signOut: function() {
-            username = '';
-            password = '';
+            localStorage.setItem('username', '');
+            localStorage.setItem('password', '');
         },
         getUsername: function() {
-            return username;
+            return localStorage.getItem('username');
         },
         getPassword: function() {
-            return password;
+            return localStorage.getItem('password');
         }
     };
 }]);
