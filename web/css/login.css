@@ -86,3 +86,21 @@
 	right: 0;
 	top: calc(100% - 2px);
 }
+
+#login form {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#login form input::-webkit-input-placeholder {
+   color: #fff;
+}
+#login form input:-moz-placeholder { /* Firefox 18- */
+   color: #fff;
+}
+#login form input::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;
+}
+#login form input:-ms-input-placeholder {
+   color: #fff;
+}
