@@ -42,6 +42,8 @@ CenterScout.config(function($routeProvider) {
     $routeProvider.otherwise({
         redirectTo: '/'
     });
+
+
 });
 
 if(isCordova())

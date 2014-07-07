@@ -1,30 +1,26 @@
 <div class="container" id="login">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="wrap">
-				<p class="form-title">Welcome to CenterScout</p>
-				<form ng-submit="signIn()" class="login">
-					<input ng-model="username" data-toggle="tooltip" data-placement="right" title="Your student ID number that you normally use to log in." placeholder="Student ID" type="text">
-					<input ng-model="password" data-toggle="tooltip" data-placement="right" title="The same password you would use to log in to PowerSchool&reg; with" placeholder="Password" type="password">
+	<div class="wrap">
+		<p class="form-title">Welcome to CenterScout</p>
+		<form ng-submit="signIn()" class="login">
+			<input class="form-control" ng-model="username" data-toggle="tooltip" data-placement="right" placeholder="Student ID" type="text">
+			<input class="form-control" ng-model="password" data-toggle="tooltip" data-placement="right" placeholder="Password" type="password">
 
-					<div class="btn-group">
-						<input class="btn btn-success btn-sm" type="submit" value="Sign In">
+			<div class="btn-group">
+				<input class="btn btn-success btn-sm" type="submit" value="Sign In">
 
-						<button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
-						      <span class="caret"></span>
-						</button>
+				<button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
+				      <span class="caret"></span>
+				</button>
 
-						<ul class="dropdown-menu right">
-							<li class="faux-item">Remember me for...</li>
-							<li><a href="#/login">10 minutes</a></li>
-							<li><a href="#/login">1 hour</a></li>
-							<li><a href="#/login">1 day</a></li>
-							<li><a href="#/login">1 week</a></li>
-							<li><a href="#/login">1 year</a></li>
-						</ul>
-					</div>
-				</form>
+				<ul class="dropdown-menu right">
+					<li class="faux-item">Remember me for...</li>
+					<li ng-click="rememberMeFor = 'm'" ng-class="{active: rememberMeFor=='m'}"><a href="#/login">10 minutes</a></li>
+					<li ng-click="rememberMeFor = 'h'" ng-class="{active: rememberMeFor=='h'}"><a href="#/login">1 hour</a></li>
+					<li ng-click="rememberMeFor = 'd'" ng-class="{active: rememberMeFor=='d'}"><a href="#/login">1 day</a></li>
+					<li ng-click="rememberMeFor = 'w'" ng-class="{active: rememberMeFor=='w'}"><a href="#/login">1 week</a></li>
+					<li ng-click="rememberMeFor = 'y'" ng-class="{active: rememberMeFor=='y'}"><a href="#/login">1 year</a></li>
+				</ul>
 			</div>
-		</div>
+		</form>
 	</div>
 </div>

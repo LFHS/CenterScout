@@ -15,3 +15,7 @@ function strToBool(string) {
 function boolToStr(boolean) {
     return boolean? 'yes' : 'no';
 }
+
+function isAtSchool() {
+    return false;
+}

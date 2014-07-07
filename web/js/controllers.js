@@ -1,3 +1,16 @@
+CenterScout.controller('NavController', ['$scope', 'AuthService', function($scope, AuthService) {
+
+    $scope.signOut = function() {
+        AuthService.signOut();
+    };
+
+    setInterval(function() {
+        if(!AuthService.isSignedIn())
+            window.location.hash = "#/login";
+    }, 1000);
+
+}]);
+
 CenterScout.controller('HomeController', ['$scope', 'GradeData', 'AssignmentData', function($scope, GradeData, AssignmentData) {
 
     $scope.grades = [{ name: 'Loading...', class: '', date: '', percent: '', fraction: ''}];
@@ -32,7 +45,19 @@ CenterScout.controller('LoginController', ['$scope', 'AuthService', function($sc
 
     $scope.signIn = function() {
         AuthService.signIn($scope.username, $scope.password);
+        window.location.hash = '#/home';
     };
+
+    // m for minutes
+    // h for hours
+    // d for days
+    // w for weeks
+    // y for year
+    if(isAtSchool() && !isCordova()) {
+        $scope.rememberMeFor = 'h';
+    } else {
+        $scope.rememberMeFor = 'y';
+    }
 
 }]);
 
