@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavController">
             <div class="container">
                 <div class="navbar-header">
                     <div class="cordova-nav-padding"></div>
@@ -35,10 +35,10 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i><b class="caret"></b></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i><b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Settings</a></li>
-                                <li><a href="#">Log Out</a></li>
+                                <li><a href="#/login" ng-click="signOut()">Log Out</a></li>
                             </ul>
                         </li>
                     </ul>

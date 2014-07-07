@@ -1,3 +1,11 @@
+CenterScout.controller('NavController', ['$scope', 'AuthService', function($scope, AuthService) {
+
+    $scope.signOut = function() {
+        AuthService.signOut();
+    };
+
+}]);
+
 CenterScout.controller('HomeController', ['$scope', 'GradeData', 'AssignmentData', function($scope, GradeData, AssignmentData) {
 
     $scope.grades = [{ name: 'Loading...', class: '', date: '', percent: '', fraction: ''}];
