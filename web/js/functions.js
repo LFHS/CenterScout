@@ -6,3 +6,7 @@ function handleError(error) {
     // TODO: Show user some kind of error
     console.log(error);
 }
+
+function isAtSchool() {
+    return false;
+}

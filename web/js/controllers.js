@@ -34,6 +34,17 @@ CenterScout.controller('LoginController', ['$scope', 'AuthService', function($sc
         AuthService.signIn($scope.username, $scope.password);
     };
 
+    // m for minutes
+    // h for hours
+    // d for days
+    // w for weeks
+    // y for year
+    if(isAtSchool() && !isCordova()) {
+        $scope.rememberMeFor = 'h';
+    } else {
+        $scope.rememberMeFor = 'y';
+    }
+
 }]);
 
 CenterScout.controller('ClassController', ['$scope', function($scope) {

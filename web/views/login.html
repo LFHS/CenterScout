@@ -14,11 +14,11 @@
 
 				<ul class="dropdown-menu right">
 					<li class="faux-item">Remember me for...</li>
-					<li><a href="#/login">10 minutes</a></li>
-					<li><a href="#/login">1 hour</a></li>
-					<li><a href="#/login">1 day</a></li>
-					<li><a href="#/login">1 week</a></li>
-					<li><a href="#/login">1 year</a></li>
+					<li ng-click="rememberMeFor = 'm'" ng-class="{active: rememberMeFor=='m'}"><a href="#/login">10 minutes</a></li>
+					<li ng-click="rememberMeFor = 'h'" ng-class="{active: rememberMeFor=='h'}"><a href="#/login">1 hour</a></li>
+					<li ng-click="rememberMeFor = 'd'" ng-class="{active: rememberMeFor=='d'}"><a href="#/login">1 day</a></li>
+					<li ng-click="rememberMeFor = 'w'" ng-class="{active: rememberMeFor=='w'}"><a href="#/login">1 week</a></li>
+					<li ng-click="rememberMeFor = 'y'" ng-class="{active: rememberMeFor=='y'}"><a href="#/login">1 year</a></li>
 				</ul>
 			</div>
 		</form>

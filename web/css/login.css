@@ -38,11 +38,6 @@
 	width: 100%;
 }
 
-#login form.login input[type="submit"]:hover {
-    transition: background-color 0.5s ease;
-}
-
-
 #login form.login label, form.login>a {
     font-size: 12px;
     font-weight: 400;
