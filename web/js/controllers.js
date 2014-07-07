@@ -4,6 +4,11 @@ CenterScout.controller('NavController', ['$scope', 'AuthService', function($scop
         AuthService.signOut();
     };
 
+    setInterval(function() {
+        if(!AuthService.isSignedIn())
+            window.location.hash = "#/login";
+    }, 1000);
+
 }]);
 
 CenterScout.controller('HomeController', ['$scope', 'GradeData', 'AssignmentData', function($scope, GradeData, AssignmentData) {
