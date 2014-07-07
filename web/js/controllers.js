@@ -32,6 +32,7 @@ CenterScout.controller('LoginController', ['$scope', 'AuthService', function($sc
 
     $scope.signIn = function() {
         AuthService.signIn($scope.username, $scope.password);
+        window.location.hash = '#/home';
     };
 
     // m for minutes
