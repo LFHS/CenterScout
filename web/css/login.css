@@ -24,23 +24,6 @@
     margin: 0 auto;
 }
 
-#login form.login input[type="text"], form.login input[type="password"] {
-    width: 100%;
-    margin: 0;
-    padding: 5px 10px;
-    background: 0;
-    border: 0;
-    border-bottom: 1px solid #FFFFFF;
-    outline: 0;
-    font-style: italic;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    color: #FFFFFF;
-    outline: 0;
-}
-
 #login form.login input[value="Sign In"] {
     height: 33px !important;
 }
@@ -85,22 +68,4 @@
 #login .dropdown-menu.right {
 	right: 0;
 	top: calc(100% - 2px);
-}
-
-#login form {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-#login form input::-webkit-input-placeholder {
-   color: #fff;
-}
-#login form input:-moz-placeholder { /* Firefox 18- */
-   color: #fff;
-}
-#login form input::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff;
-}
-#login form input:-ms-input-placeholder {
-   color: #fff;
 }
