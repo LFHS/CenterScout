@@ -154,3 +154,7 @@ body {
 .table-striped-inverted > tbody > tr:nth-child(even) > th {
 	background-color: #f9f9f9;
 }
+
+.heart {
+	color: #bc209c;
+}
