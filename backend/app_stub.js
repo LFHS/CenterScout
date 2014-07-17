@@ -34,6 +34,11 @@ app.use(express.static('./static'));
 // Middleware for POST requests
 app.use(express.json());
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    next();
+});
+
 /*
  *    API Endpoints
  */
@@ -74,7 +79,7 @@ var data = [
             'percent': '100%',
             'fraction': '30/30'
         },
-        
+
     ];
 
 // Get PowerSchool(R) data
