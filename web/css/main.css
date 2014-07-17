@@ -107,7 +107,7 @@ body {
 .gradeSelector {
     float: right;
     position: absolute;
-    top: 22px;
+    top: -45px;
 	right: 15px;
 }
 @media (max-width: 991px) {

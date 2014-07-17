@@ -1,29 +1,7 @@
 <div class="row">
+    <h2>Grades</h2>
     <div class="col-md-6">
 
-        <h2>Assignments</h2>
-        <table class="table table-striped">
-            <tr ng-repeat="assignment in assignments">
-                <td class="check"><input type="checkbox" ng-checked="assignment.done" ng-model="assignment.done"></td>
-                <td class="item" ng-class="{done: assignment.done}">{{ assignment.name }}</td>
-                <td class="course"><span class="label label-primary">{{ assignment.class }}</span></td>
-                <td class="date">{{ assignment.date }}</td>
-            </tr>
-        </table>
-
-        <h2>News</h2>
-        <table class="table table-striped">
-            <tr>
-                <td class="check"><span>&bull;</span></td>
-                <td class="item"><a href="news?id=">CenterScout Public Beta Now Open!</a></td>
-                <td class="date">02/05</td>
-            </tr>
-        </table>
-
-    </div>
-    <div class="col-md-6">
-
-        <h2>Grades</h2>
         <div class="gradeSelector">
             <div class="btn-group" ng-class="{courseSelectorOpen: open}">
                 <button class="btn btn-sm dropdown-toggle" data-toggle="dropdown" ng-click="courseSelectorOpen=!courseSelectorOpen">
@@ -43,6 +21,24 @@
                 <td class="percent">{{ grade.percent }}</td>
                 <td class="course"><span class="label label-primary">{{ grade.class }}</span></td>
                 <td class="date">{{ grade.date }}</td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="col-md-6">
+
+    </div>
+</div>
+
+<div class="row">
+    <h2>News</h2>
+    <div class="col-md-6">
+
+        <table class="table table-striped">
+            <tr>
+                <td class="check"><span>&bull;</span></td>
+                <td class="item"><a href="news?id=">CenterScout Public Beta Now Open!</a></td>
+                <td class="date">02/05</td>
             </tr>
         </table>
 
