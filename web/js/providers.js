@@ -21,29 +21,6 @@ CenterScout.factory('GradeData', ['$http', '$q', function($http, $q) {
     };
 }]);
 
-CenterScout.factory('AssignmentData', ['$http', '$q', function($http, $q) {
-    var assignments = null;
-
-    return function() {
-        var deferred = $q.defer();
-
-        if(assignments) {
-            deferred.resolve(assignments);
-        } else {
-            $http.get('http://centerscout.io:8080/api/assignments')
-                .success(function(assignmentData) {
-                    assignments = assignmentData;
-                    deferred.resolve(assignments);
-                })
-                .error(function(response) {
-                    deferred.reject(response);
-                });
-        }
-
-        return deferred.promise;
-    };
-}]);
-
 CenterScout.factory('AuthService', ['$http', '$q', function($http, $q) {
     return {
         isSignedIn: function() {
