@@ -7,7 +7,7 @@ CenterScout.factory('GradeData', ['$http', '$q', function($http, $q) {
         if(grades) {
             deferred.resolve(grades);
         } else {
-            $http.get('http://localhost:8080/api/grades')
+            $http.get('http://centerscout.io:8080/api/grades')
                 .success(function(gradeData) {
                     grades = gradeData;
                     deferred.resolve(grades);
@@ -30,7 +30,7 @@ CenterScout.factory('AssignmentData', ['$http', '$q', function($http, $q) {
         if(assignments) {
             deferred.resolve(assignments);
         } else {
-            $http.get('http://localhost:8080/api/assignments')
+            $http.get('http://centerscout.io:8080/api/assignments')
                 .success(function(assignmentData) {
                     assignments = assignmentData;
                     deferred.resolve(assignments);
