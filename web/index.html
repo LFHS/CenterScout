@@ -26,7 +26,7 @@
                     <a class="navbar-brand" href="#"><img id="logo" src="img/CenterScoutLogo.png"></a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" ng-if="isSignedIn()">
                         <li><a href="#/home">Home</a></li>
                         <li><a href="#/grades">Grades</a></li>
                         <li><a href="#/classes">Classes</a></li>
@@ -37,8 +37,8 @@
                             <a class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i><b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#/settings">Settings</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#/login" ng-click="signOut()">Log Out</a></li>
+                                <li class="divider" ng-if="isSignedIn()"></li>
+                                <li><a href="#/login" ng-if="isSignedIn()" ng-click="signOut()">Log Out</a></li>
                             </ul>
                         </li>
                     </ul>

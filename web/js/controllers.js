@@ -4,6 +4,8 @@ CenterScout.controller('NavController', ['$scope', 'AuthService', function($scop
         AuthService.signOut();
     };
 
+    $scope.isSignedIn = AuthService.isSignedIn;
+
     setInterval(function() {
         if(!AuthService.isSignedIn())
             window.location.hash = "#/login";
