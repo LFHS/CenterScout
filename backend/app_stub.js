@@ -46,21 +46,21 @@ app.use(function(req, res, next) {
 var data = [
         {
             'name':  'Chapter 12 TEST',
-            'class': 'M',
+            'class': 'Math',
             'date':  '02/15',
             'percent': '98%',
             'fraction': '49/50'
         },
         {
             'name':  'Chapter 12 Homework',
-            'class': 'M',
+            'class': 'Math',
             'date':  '05/29',
             'percent': '100%',
             'fraction': '24/24'
         },
         {
             'name':  'Chapter 12.3 Quiz',
-            'class': 'M',
+            'class': 'Math',
             'date':  '05/30',
             'percent': '86%',
             'fraction': '26/30'
@@ -79,7 +79,41 @@ var data = [
             'percent': '100%',
             'fraction': '30/30'
         },
-
+        {
+            'name':  'Portfolio Project',
+            'class': 'English',
+            'date':  '02/15',
+            'percent': '98%',
+            'fraction': '49/50'
+        },
+        {
+            'name':  'Odyssey TEST',
+            'class': 'English',
+            'date':  '10/15',
+            'percent': '94%',
+            'fraction': '94/100'
+        },
+        {
+            'name':  'Odyssey Project',
+            'class': 'English',
+            'date':  '10/20',
+            'percent': '100%',
+            'fraction': '50/50'
+        },
+        {
+            'name':  'Chapter 12 TEST',
+            'class': 'History',
+            'date':  '06/01',
+            'percent': '90%',
+            'fraction': '45/50'
+        },
+        {
+            'name':  'Chapter 13 TEST',
+            'class': 'History',
+            'date':  '03/16',
+            'percent': '96%',
+            'fraction': '46/50'
+        }
     ];
 
 // Get PowerSchool(R) data
