@@ -1,1 +1,1 @@
-var CenterScout = angular.module('CenterScout', ['ngRoute']);
+var CenterScout = angular.module('CenterScout', ['ngRoute', 'angles']);
