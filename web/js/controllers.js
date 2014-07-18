@@ -16,7 +16,7 @@ CenterScout.controller('NavController', ['$scope', 'AuthService', function($scop
 CenterScout.controller('HomeController', ['$scope', 'GradeData', function($scope, GradeData) {
 
     $scope.grades = [{ name: 'Loading...', class: '', date: '', percent: '', fraction: ''}];
-    $scope.courses = ['M', 'CAD'];
+    $scope.courses = [];
     $scope.selectedCourse = '...';
 
     $scope.setSelectedCourse = function() {
@@ -27,17 +27,17 @@ CenterScout.controller('HomeController', ['$scope', 'GradeData', function($scope
         return $scope.selectedCourse == this.course;
     };
 
-    var updateClassList = function(grades) {
-        grades.forEach(function(grade) {
-            if(($scope.courses.indexOf(grade.class) === -1) && (grades.class.indexOf('Lunch') === -1))
-                $scope.courses.push(grade.class);
-        });
-        $scope.selectedCourse = $scope.courses[0];
-    };
-
     GradeData().then(function(grades) {
         $scope.grades = grades;
-        updateClassList(grades);
+        $scope.courses = grades.map(function(grade) {
+            return grade.class;
+        });
+        $scope.courses = $scope.courses.filter(function(element, index, array){
+            return array.indexOf(element) >= index;
+        });
+        if($scope.selectedCourse == '...') {
+            $scope.selectedCourse = $scope.courses[0];
+        }
     }, handleError);
 
     var chart = {};
