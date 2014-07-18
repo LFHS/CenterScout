@@ -40,6 +40,28 @@ CenterScout.controller('HomeController', ['$scope', 'GradeData', function($scope
         updateClassList(grades);
     }, handleError);
 
+    var chart = {};
+    $scope.chart = chart;
+
+    chart.getData = function(selectedCourse) {
+        return {
+            labels: ['A', 'B', 'C', 'D', 'E'],
+            datasets: [
+                {
+                    fillColor:        "rgba(0,0,0,0)",
+                    pointColor:       "rgba(0,0,0,0)",
+					strokeColor:      randomColor({seed: selectedCourse}),
+                    pointStrokeColor: randomColor({seed: selectedCourse}),
+					data : [4, 3, 5, 4, 6]
+                }
+            ]
+        };
+    };
+
+    chart.options =  {
+        bezierCurveTension : 0.4
+    };
+
 }]);
 
 CenterScout.controller('LoginController', ['$scope', 'AuthService', function($scope, AuthService) {
