@@ -43,19 +43,23 @@ CenterScout.controller('HomeController', ['$scope', 'GradeData', function($scope
     var chart = {};
     $scope.chart = chart;
 
+    var data = {
+        labels: ['A', 'B', 'C', 'D', 'E'],
+        datasets: [
+            {
+                fillColor:        "rgba(0,0,0,0)",
+                pointColor:       "rgba(0,0,0,0)",
+                strokeColor:      randomColor({seed: $scope.selectedCourse}),
+                pointStrokeColor: randomColor({seed: $scope.selectedCourse}),
+                data : [4, 3, 5, 4, 6]
+            }
+        ]
+    };
+
     chart.getData = function(selectedCourse) {
-        return {
-            labels: ['A', 'B', 'C', 'D', 'E'],
-            datasets: [
-                {
-                    fillColor:        "rgba(0,0,0,0)",
-                    pointColor:       "rgba(0,0,0,0)",
-					strokeColor:      randomColor({seed: selectedCourse}),
-                    pointStrokeColor: randomColor({seed: selectedCourse}),
-					data : [4, 3, 5, 4, 6]
-                }
-            ]
-        };
+        data.datasets[0].strokeColor      = randomColor({seed: $scope.selectedCourse});
+        data.datasets[0].pointStrokeColor = randomColor({seed: $scope.selectedCourse});
+        return data;
     };
 
     chart.options =  {
