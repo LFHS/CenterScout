@@ -1,138 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="CenterScout">
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-<head>
+        <title>CenterScout</title>
+        <meta content="" name="description">
+        <meta content="width=device-width" name="viewport">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/login.css" rel="stylesheet">
+    </head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Center Scout - Landing</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/landing.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#">Center Scout</a>
-            </li>
-            <li>
-            	<a href="#">Login</a>
-            </li>
-            <li>
-                <a href="#">Join Now!</a>
-            </li>
-            <li>
-                <a href="#">Contact us</a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Center Scout</h1>
-            <h3>Lake Forest High School's Assistant</h3>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find out more</a>
-        </div>
-    </header>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Center Scout</strong>
-                    </h4>
-                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavController">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="cordova-nav-padding"></div>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img id="logo" src="img/CenterScoutLogo.png"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" ng-if="isSignedIn()">
+                        <li><a href="#/home">Home</a></li>
+                        <li><a href="#/grades">Grades</a></li>
+                        <li><a href="#/classes">Classes</a></li>
+                        <li><a href="#/news">News</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/settings">Settings</a></li>
+                                <li class="divider" ng-if="isSignedIn()"></li>
+                                <li><a href="#/login" ng-if="isSignedIn()" ng-click="signOut()">Log Out</a></li>
+                            </ul>
                         </li>
                     </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="container" id="mainView" ng-view>
+        </div>
+        <footer>
+            <p>Made with <span class="heart">&lt;3</span> by Will Franzen and friends &middot; Check out the source code on <a href="https://github.com/LFHS/CenterScout/">GitHub</a>!</p>
+        </footer>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/angular.js"></script>
+        <script src="js/angular-route.js"></script>
+        <script src="js/nodoubletap.js"></script>
 
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
-
-</body>
-
+        <script src="js/init.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/providers.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
