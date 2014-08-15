@@ -23,25 +23,30 @@ body {
 }
 
 .text-vertical-center h1 {
-    margin: 0;
-    padding: 0;
+    margin: 5px 100px;
+    padding: 0px;
     font-size: 4.5em;
     font-weight: 700;
+    background-color: rgba(0,0,0,0.23)
 }
-
+.text-vertical-center h3 {
+	background-color: rgba(0,0,0,0.23);
+	margin: 5px 100px;
+	
+}
 /* Custom Button Styles */
 
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(52,255,0,0.4);
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
     color: #fff;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(52,255,0,0.72);
 }
 
 .btn-light {
