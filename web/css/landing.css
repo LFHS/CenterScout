@@ -28,12 +28,13 @@ body {
     padding: 0px;
     font-size: 4.5em;
     font-weight: 700;
-    background-color: rgba(0,0,0,0.23)
+    background-color: rgba(0,0,0,0.23);
+    color: white;
 }
 .text-vertical-center h3 {
 	background-color: rgba(0,0,0,0.23);
 	margin: 5px 100px;
-
+    color: white;
 }
 /* Custom Button Styles */
 
