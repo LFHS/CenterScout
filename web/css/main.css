@@ -8,13 +8,18 @@
 	height: 100%;
 }
 
+table {
+	color: #2c3e50;
+}
+
 footer {
 	font-size: 10px;
 	position: absolute;
 	bottom: -5px;
-	left: 5px;
+	left: 0px;
 	background-color: #fff;
-	box-shadow: 5px -5px 5px #fff, 5px 0px 5px #fff;
+	box-shadow: 5px -5px 3px #fff, -5px -5px 3px #fff;
+	color: #000;
 }
 
 .cordova footer {
@@ -156,5 +161,5 @@ body {
 }
 
 .heart {
-	color: #bc209c;
+	color: #ff0000;
 }
