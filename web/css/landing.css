@@ -39,7 +39,7 @@ body {
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(52,255,0,0.4);
+    background-color: rgba(26,79,194,0.7);
     padding: 18px 21px 18px 21px
 }
 
@@ -47,7 +47,7 @@ body {
 .btn-dark:focus,
 .btn-dark:active {
     color: #fff;
-    background-color: rgba(52,255,0,0.72);
+    background-color: rgba(26,79,194,0.83);
 }
 
 .btn-light {
