@@ -62,8 +62,9 @@ CenterScout.controller('HomeController', ['$scope', 'GradeData', function($scope
         return data;
     };
 
-    chart.options =  {
-        bezierCurveTension : 0.4
+    chart.options = {
+        bezierCurveTension: 0.4,
+        responsive: true
     };
 
 }]);
