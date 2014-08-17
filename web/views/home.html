@@ -8,7 +8,7 @@
                     {{ selectedCourse }} <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li ng-repeat="course in courses">
+                    <li ng-repeat="course in courses" ng-class="{active: isSelectedCourse()}">
                         <a ng-click="setSelectedCourse()">{{ course }}</a>
                     </li>
                 </ul>

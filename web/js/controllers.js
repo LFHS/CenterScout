@@ -23,6 +23,10 @@ CenterScout.controller('HomeController', ['$scope', 'GradeData', function($scope
         $scope.selectedCourse = this.course;
     };
 
+    $scope.isSelectedCourse = function() {
+        return $scope.selectedCourse == this.course;
+    };
+
     var updateClassList = function(grades) {
         grades.forEach(function(grade) {
             if(($scope.courses.indexOf(grade.class) === -1) && (grades.class.indexOf('Lunch') === -1))
