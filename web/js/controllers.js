@@ -47,7 +47,7 @@ CenterScout.controller('HomeController', ['$scope', 'GradeData', function($scope
         labels: ['A', 'B', 'C', 'D', 'E'],
         datasets: [
             {
-                fillColor:        "rgba(0,0,0,0)",
+                fillColor:        "#f9f9f9",
                 pointColor:       "rgba(0,0,0,0)",
                 strokeColor:      randomColor({seed: $scope.selectedCourse}),
                 pointStrokeColor: randomColor({seed: $scope.selectedCourse}),

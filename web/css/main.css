@@ -162,3 +162,10 @@ body {
 li:hover>a {
 	color: gold !important;
 }
+
+canvas {
+	padding: 3px;
+	border-radius: 3px;
+	background-color: #f9f9f9;
+	margin-top: 44px;
+}
