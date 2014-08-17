@@ -113,16 +113,11 @@ body {
 
 .gradeSelector {
     float: right;
-    position: absolute;
-    top: -45px;
-	right: 15px;
 }
-@media (max-width: 991px) {
-    .gradeSelector {
-        top: 0px;
-    }
+.gradeSelector+h2 {
+	margin-top: 0px;
+	float: left;
 }
-
 .gradeSelector .dropdown-menu {
      left: -100px;
 }
