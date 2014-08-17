@@ -164,6 +164,6 @@ body {
 	color: #ff0000;
 }
 
-li:hover a {
+li:hover>a {
 	color: gold !important;
 }
