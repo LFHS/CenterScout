@@ -1,9 +1,4 @@
 CenterScout.config(function($routeProvider) {
-    $routeProvider.when('/', {
-        controller: 'HomeController',
-        templateUrl: 'views/home.html'
-    });
-
     $routeProvider.when('/home', {
         controller: 'HomeController',
         templateUrl: 'views/home.html'
@@ -40,7 +35,7 @@ CenterScout.config(function($routeProvider) {
     });
 
     $routeProvider.otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
     });
 
 
