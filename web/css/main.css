@@ -163,3 +163,7 @@ body {
 .heart {
 	color: #ff0000;
 }
+
+li:hover a {
+	color: gold !important;
+}
