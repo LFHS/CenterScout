@@ -119,7 +119,7 @@ body {
 	float: left;
 }
 .gradeSelector .dropdown-menu {
-     left: -100px;
+    left: -115px !important;
 }
 
 #logo {
