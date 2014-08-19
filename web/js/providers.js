@@ -1,26 +1,3 @@
-CenterScout.factory('GradeData', ['$http', '$q', function($http, $q) {
-    var grades = null;
-
-    return function() {
-        var deferred = $q.defer();
-
-        if(grades) {
-            deferred.resolve(grades);
-        } else {
-            $http.get('http://centerscout.io:8080/api/grades')
-                .success(function(gradeData) {
-                    grades = gradeData;
-                    deferred.resolve(grades);
-                })
-                .error(function(response) {
-                    deferred.reject(response);
-                });
-        }
-
-        return deferred.promise;
-    };
-}]);
-
 CenterScout.factory('AuthService', ['$http', '$q', function($http, $q) {
     return {
         isSignedIn: function() {
@@ -40,6 +17,33 @@ CenterScout.factory('AuthService', ['$http', '$q', function($http, $q) {
         getPassword: function() {
             return localStorage.getItem('password');
         }
+    };
+}]);
+
+CenterScout.factory('GradeData', ['$http', '$q', function($http, $q, AuthService) {
+    var grades = null;
+
+    return function() {
+        var deferred = $q.defer();
+
+        if(grades) {
+            deferred.resolve(grades);
+        } else {
+            // TODO: Use AuthService for this
+            var username = localStorage.getItem('username');
+            var password = localStorage.getItem('password');
+            var url = 'http://localhost:8080/api/grades' + '?username=' + username + '&password=' + password;
+            $http.get(url)
+                .success(function(gradeData) {
+                    grades = gradeData;
+                    deferred.resolve(grades);
+                })
+                .error(function(response) {
+                    deferred.reject(response);
+                });
+        }
+
+        return deferred.promise;
     };
 }]);
 
